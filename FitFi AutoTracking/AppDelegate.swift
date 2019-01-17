@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import FacebookCore
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,7 +18,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        SDKApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
+        //        Check If User has Logged In
+        if AccessToken.current != nil {
+            // User is logged in, use 'accessToken' here.
+            print("User has logged in.")
+        } else {
+            goToSignInMainPage()
+        }
         return true
+    }
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        return SDKApplicationDelegate.shared.application(app, open: url, options: options)
+    }
+    
+    func goToSignInMainPage() {
+        let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "SignInSignUp", bundle: nil)
+        let signInSignUpRootNC : UIViewController = mainStoryboardIpad.instantiateViewController(withIdentifier: "signInSignIpViewController")
+        
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        self.window?.rootViewController = signInSignUpRootNC
+        self.window?.makeKeyAndVisible()
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

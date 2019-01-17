@@ -7,14 +7,61 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		413C33ACFA88AF299B8F2FEA /* Pods_FitFi_AutoTrackingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAADAC7760766F103F3C40E1 /* Pods_FitFi_AutoTrackingTests.framework */; };
+		9D864C101E1EB609095156D4 /* Pods_FitFi_AutoTracking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1CFDB0FAD66B915EB32058F /* Pods_FitFi_AutoTracking.framework */; };
+		D6688B0E7B45C69CE6F3BCA5 /* Pods_FitFi_AutoTrackingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B9E464F0B2ABF8F7C6372BF /* Pods_FitFi_AutoTrackingUITests.framework */; };
+		EA13246B21F0578F00B202D5 /* SelectAgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA13246A21F0578F00B202D5 /* SelectAgeViewController.swift */; };
+		EA13246C21F0578F00B202D5 /* SelectAgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA13246A21F0578F00B202D5 /* SelectAgeViewController.swift */; };
+		EA13246D21F0578F00B202D5 /* SelectAgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA13246A21F0578F00B202D5 /* SelectAgeViewController.swift */; };
+		EA13246F21F0604400B202D5 /* FinishProfileSetupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA13246E21F0604400B202D5 /* FinishProfileSetupVC.swift */; };
+		EA13247021F0604400B202D5 /* FinishProfileSetupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA13246E21F0604400B202D5 /* FinishProfileSetupVC.swift */; };
+		EA13247121F0604400B202D5 /* FinishProfileSetupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA13246E21F0604400B202D5 /* FinishProfileSetupVC.swift */; };
+		EA13247321F06C9800B202D5 /* ProfileSetupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA13247221F06C9800B202D5 /* ProfileSetupTableViewCell.swift */; };
+		EA13247421F06C9800B202D5 /* ProfileSetupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA13247221F06C9800B202D5 /* ProfileSetupTableViewCell.swift */; };
+		EA13247521F06C9800B202D5 /* ProfileSetupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA13247221F06C9800B202D5 /* ProfileSetupTableViewCell.swift */; };
 		EA41216C21E408C9009CD6B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA41216B21E408C9009CD6B0 /* AppDelegate.swift */; };
-		EA41216E21E408C9009CD6B0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA41216D21E408C9009CD6B0 /* ViewController.swift */; };
 		EA41217121E408C9009CD6B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA41216F21E408C9009CD6B0 /* Main.storyboard */; };
 		EA41217421E408C9009CD6B0 /* FitFi_AutoTracking.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EA41217221E408C9009CD6B0 /* FitFi_AutoTracking.xcdatamodeld */; };
 		EA41217621E408CB009CD6B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA41217521E408CB009CD6B0 /* Assets.xcassets */; };
 		EA41217921E408CB009CD6B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA41217721E408CB009CD6B0 /* LaunchScreen.storyboard */; };
 		EA41218421E408CB009CD6B0 /* FitFi_AutoTrackingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA41218321E408CB009CD6B0 /* FitFi_AutoTrackingTests.swift */; };
 		EA41218F21E408CB009CD6B0 /* FitFi_AutoTrackingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA41218E21E408CB009CD6B0 /* FitFi_AutoTrackingUITests.swift */; };
+		EA4121A121E69F34009CD6B0 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4121A021E69F34009CD6B0 /* CollectionViewCell.swift */; };
+		EA4121A221E69F34009CD6B0 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4121A021E69F34009CD6B0 /* CollectionViewCell.swift */; };
+		EA4121A321E69F34009CD6B0 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4121A021E69F34009CD6B0 /* CollectionViewCell.swift */; };
+		EA4121A521E6A313009CD6B0 /* CollectionViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4121A421E6A313009CD6B0 /* CollectionViewCell2.swift */; };
+		EA4121A621E6A313009CD6B0 /* CollectionViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4121A421E6A313009CD6B0 /* CollectionViewCell2.swift */; };
+		EA4121A721E6A313009CD6B0 /* CollectionViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4121A421E6A313009CD6B0 /* CollectionViewCell2.swift */; };
+		EAD6754421ED1CE0007312D0 /* SignInSignUpInitialVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD6754321ED1CE0007312D0 /* SignInSignUpInitialVC.swift */; };
+		EAD6754521ED1CE0007312D0 /* SignInSignUpInitialVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD6754321ED1CE0007312D0 /* SignInSignUpInitialVC.swift */; };
+		EAD6754621ED1CE0007312D0 /* SignInSignUpInitialVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD6754321ED1CE0007312D0 /* SignInSignUpInitialVC.swift */; };
+		EAD6754821ED1E0F007312D0 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD6754721ED1E0F007312D0 /* FeedViewController.swift */; };
+		EAD6754921ED1E0F007312D0 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD6754721ED1E0F007312D0 /* FeedViewController.swift */; };
+		EAD6754A21ED1E0F007312D0 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD6754721ED1E0F007312D0 /* FeedViewController.swift */; };
+		EAD6754C21ED27CB007312D0 /* SetUpWeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD6754B21ED27CB007312D0 /* SetUpWeightViewController.swift */; };
+		EAD6754D21ED27CB007312D0 /* SetUpWeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD6754B21ED27CB007312D0 /* SetUpWeightViewController.swift */; };
+		EAD6754E21ED27CC007312D0 /* SetUpWeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD6754B21ED27CB007312D0 /* SetUpWeightViewController.swift */; };
+		EAD6755021EE4456007312D0 /* SignInSignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAD6754F21EE4456007312D0 /* SignInSignUp.storyboard */; };
+		EAD6755121EE4456007312D0 /* SignInSignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAD6754F21EE4456007312D0 /* SignInSignUp.storyboard */; };
+		EAD6755221EE4456007312D0 /* SignInSignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAD6754F21EE4456007312D0 /* SignInSignUp.storyboard */; };
+		EAD6755521EE47ED007312D0 /* SocialDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD6755421EE47ED007312D0 /* SocialDetailsViewController.swift */; };
+		EAD6755621EE47ED007312D0 /* SocialDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD6755421EE47ED007312D0 /* SocialDetailsViewController.swift */; };
+		EAD6755721EE47ED007312D0 /* SocialDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD6755421EE47ED007312D0 /* SocialDetailsViewController.swift */; };
+		EAD6755A21EE6BC0007312D0 /* AccountInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD6755921EE6BC0007312D0 /* AccountInfo.swift */; };
+		EAD6755B21EE6BC0007312D0 /* AccountInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD6755921EE6BC0007312D0 /* AccountInfo.swift */; };
+		EAD6755C21EE6BC0007312D0 /* AccountInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD6755921EE6BC0007312D0 /* AccountInfo.swift */; };
+		EAD6756F21EF8CEE007312D0 /* SetUpProfileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD6756D21EF8CEE007312D0 /* SetUpProfileCollectionViewCell.swift */; };
+		EAD6757021EF8CEE007312D0 /* SetUpProfileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD6756D21EF8CEE007312D0 /* SetUpProfileCollectionViewCell.swift */; };
+		EAD6757121EF8CEE007312D0 /* SetUpProfileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD6756D21EF8CEE007312D0 /* SetUpProfileCollectionViewCell.swift */; };
+		EAD6757221EF8CEE007312D0 /* SetUpProfileCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAD6756E21EF8CEE007312D0 /* SetUpProfileCollectionViewCell.xib */; };
+		EAD6757321EF8CEE007312D0 /* SetUpProfileCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAD6756E21EF8CEE007312D0 /* SetUpProfileCollectionViewCell.xib */; };
+		EAD6757421EF8CEE007312D0 /* SetUpProfileCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAD6756E21EF8CEE007312D0 /* SetUpProfileCollectionViewCell.xib */; };
+		EAFEB36A21F0E4C3005D8C9F /* PickerViewLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFEB36921F0E4C3005D8C9F /* PickerViewLauncher.swift */; };
+		EAFEB36B21F0E4C3005D8C9F /* PickerViewLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFEB36921F0E4C3005D8C9F /* PickerViewLauncher.swift */; };
+		EAFEB36C21F0E4C3005D8C9F /* PickerViewLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFEB36921F0E4C3005D8C9F /* PickerViewLauncher.swift */; };
+		EAFEB36E21F10CEF005D8C9F /* SetGoalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFEB36D21F10CEF005D8C9F /* SetGoalsViewController.swift */; };
+		EAFEB36F21F10CEF005D8C9F /* SetGoalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFEB36D21F10CEF005D8C9F /* SetGoalsViewController.swift */; };
+		EAFEB37021F10CEF005D8C9F /* SetGoalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFEB36D21F10CEF005D8C9F /* SetGoalsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,9 +82,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F857A541CEA7DB6FD439216 /* Pods-FitFi AutoTrackingUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitFi AutoTrackingUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FitFi AutoTrackingUITests/Pods-FitFi AutoTrackingUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		4B9E464F0B2ABF8F7C6372BF /* Pods_FitFi_AutoTrackingUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FitFi_AutoTrackingUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		963823C1FE2042134DA565BF /* Pods-FitFi AutoTracking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitFi AutoTracking.release.xcconfig"; path = "Pods/Target Support Files/Pods-FitFi AutoTracking/Pods-FitFi AutoTracking.release.xcconfig"; sourceTree = "<group>"; };
+		96C8561DE189CEE511257FAD /* Pods-FitFi AutoTrackingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitFi AutoTrackingUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FitFi AutoTrackingUITests/Pods-FitFi AutoTrackingUITests.release.xcconfig"; sourceTree = "<group>"; };
+		B13DDF5C6B3DEDE4B9DA5792 /* Pods-FitFi AutoTrackingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitFi AutoTrackingTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FitFi AutoTrackingTests/Pods-FitFi AutoTrackingTests.release.xcconfig"; sourceTree = "<group>"; };
+		B291D93F89AA4BEC8B4FCDE5 /* Pods-FitFi AutoTrackingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitFi AutoTrackingTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FitFi AutoTrackingTests/Pods-FitFi AutoTrackingTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E1CFDB0FAD66B915EB32058F /* Pods_FitFi_AutoTracking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FitFi_AutoTracking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA13246A21F0578F00B202D5 /* SelectAgeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAgeViewController.swift; sourceTree = "<group>"; };
+		EA13246E21F0604400B202D5 /* FinishProfileSetupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishProfileSetupVC.swift; sourceTree = "<group>"; };
+		EA13247221F06C9800B202D5 /* ProfileSetupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSetupTableViewCell.swift; sourceTree = "<group>"; };
 		EA41216821E408C9009CD6B0 /* FitFi AutoTracking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FitFi AutoTracking.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA41216B21E408C9009CD6B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EA41216D21E408C9009CD6B0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EA41217021E408C9009CD6B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EA41217321E408C9009CD6B0 /* FitFi_AutoTracking.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FitFi_AutoTracking.xcdatamodel; sourceTree = "<group>"; };
 		EA41217521E408CB009CD6B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +105,20 @@
 		EA41218A21E408CB009CD6B0 /* FitFi AutoTrackingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FitFi AutoTrackingUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA41218E21E408CB009CD6B0 /* FitFi_AutoTrackingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitFi_AutoTrackingUITests.swift; sourceTree = "<group>"; };
 		EA41219021E408CB009CD6B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA4121A021E69F34009CD6B0 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		EA4121A421E6A313009CD6B0 /* CollectionViewCell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell2.swift; sourceTree = "<group>"; };
+		EAD6754321ED1CE0007312D0 /* SignInSignUpInitialVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInSignUpInitialVC.swift; sourceTree = "<group>"; };
+		EAD6754721ED1E0F007312D0 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		EAD6754B21ED27CB007312D0 /* SetUpWeightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetUpWeightViewController.swift; sourceTree = "<group>"; };
+		EAD6754F21EE4456007312D0 /* SignInSignUp.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SignInSignUp.storyboard; sourceTree = "<group>"; };
+		EAD6755421EE47ED007312D0 /* SocialDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialDetailsViewController.swift; sourceTree = "<group>"; };
+		EAD6755921EE6BC0007312D0 /* AccountInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountInfo.swift; sourceTree = "<group>"; };
+		EAD6756D21EF8CEE007312D0 /* SetUpProfileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetUpProfileCollectionViewCell.swift; sourceTree = "<group>"; };
+		EAD6756E21EF8CEE007312D0 /* SetUpProfileCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SetUpProfileCollectionViewCell.xib; sourceTree = "<group>"; };
+		EAFEB36921F0E4C3005D8C9F /* PickerViewLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewLauncher.swift; sourceTree = "<group>"; };
+		EAFEB36D21F10CEF005D8C9F /* SetGoalsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetGoalsViewController.swift; sourceTree = "<group>"; };
+		EF550A7EF895F51C7BB8D9C7 /* Pods-FitFi AutoTracking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitFi AutoTracking.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FitFi AutoTracking/Pods-FitFi AutoTracking.debug.xcconfig"; sourceTree = "<group>"; };
+		FAADAC7760766F103F3C40E1 /* Pods_FitFi_AutoTrackingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FitFi_AutoTrackingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +126,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D864C101E1EB609095156D4 /* Pods_FitFi_AutoTracking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +134,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				413C33ACFA88AF299B8F2FEA /* Pods_FitFi_AutoTrackingTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +142,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6688B0E7B45C69CE6F3BCA5 /* Pods_FitFi_AutoTrackingUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3DCFC18427062BCEEEF234E4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EF550A7EF895F51C7BB8D9C7 /* Pods-FitFi AutoTracking.debug.xcconfig */,
+				963823C1FE2042134DA565BF /* Pods-FitFi AutoTracking.release.xcconfig */,
+				B291D93F89AA4BEC8B4FCDE5 /* Pods-FitFi AutoTrackingTests.debug.xcconfig */,
+				B13DDF5C6B3DEDE4B9DA5792 /* Pods-FitFi AutoTrackingTests.release.xcconfig */,
+				0F857A541CEA7DB6FD439216 /* Pods-FitFi AutoTrackingUITests.debug.xcconfig */,
+				96C8561DE189CEE511257FAD /* Pods-FitFi AutoTrackingUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7F5FF692F84C2F8674956247 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E1CFDB0FAD66B915EB32058F /* Pods_FitFi_AutoTracking.framework */,
+				FAADAC7760766F103F3C40E1 /* Pods_FitFi_AutoTrackingTests.framework */,
+				4B9E464F0B2ABF8F7C6372BF /* Pods_FitFi_AutoTrackingUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EA41215F21E408C9009CD6B0 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +179,8 @@
 				EA41218221E408CB009CD6B0 /* FitFi AutoTrackingTests */,
 				EA41218D21E408CB009CD6B0 /* FitFi AutoTrackingUITests */,
 				EA41216921E408C9009CD6B0 /* Products */,
+				3DCFC18427062BCEEEF234E4 /* Pods */,
+				7F5FF692F84C2F8674956247 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,8 +198,10 @@
 			isa = PBXGroup;
 			children = (
 				EA41216B21E408C9009CD6B0 /* AppDelegate.swift */,
-				EA41216D21E408C9009CD6B0 /* ViewController.swift */,
 				EA41216F21E408C9009CD6B0 /* Main.storyboard */,
+				EAD6754721ED1E0F007312D0 /* FeedViewController.swift */,
+				EAD6755821EE6BAB007312D0 /* Helpers */,
+				EAD6755321EE448A007312D0 /* SignInSignUp */,
 				EA41217521E408CB009CD6B0 /* Assets.xcassets */,
 				EA41217721E408CB009CD6B0 /* LaunchScreen.storyboard */,
 				EA41217A21E408CB009CD6B0 /* Info.plist */,
@@ -128,6 +228,42 @@
 			path = "FitFi AutoTrackingUITests";
 			sourceTree = "<group>";
 		};
+		EAD6755321EE448A007312D0 /* SignInSignUp */ = {
+			isa = PBXGroup;
+			children = (
+				EAD6754F21EE4456007312D0 /* SignInSignUp.storyboard */,
+				EAD6754321ED1CE0007312D0 /* SignInSignUpInitialVC.swift */,
+				EA13246A21F0578F00B202D5 /* SelectAgeViewController.swift */,
+				EA13246E21F0604400B202D5 /* FinishProfileSetupVC.swift */,
+				EA13247221F06C9800B202D5 /* ProfileSetupTableViewCell.swift */,
+				EAFEB36D21F10CEF005D8C9F /* SetGoalsViewController.swift */,
+				EAD6757521EF8E0C007312D0 /* Weight Scale Part */,
+			);
+			path = SignInSignUp;
+			sourceTree = "<group>";
+		};
+		EAD6755821EE6BAB007312D0 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				EAD6755921EE6BC0007312D0 /* AccountInfo.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		EAD6757521EF8E0C007312D0 /* Weight Scale Part */ = {
+			isa = PBXGroup;
+			children = (
+				EAFEB36921F0E4C3005D8C9F /* PickerViewLauncher.swift */,
+				EAD6755421EE47ED007312D0 /* SocialDetailsViewController.swift */,
+				EAD6756D21EF8CEE007312D0 /* SetUpProfileCollectionViewCell.swift */,
+				EAD6756E21EF8CEE007312D0 /* SetUpProfileCollectionViewCell.xib */,
+				EAD6754B21ED27CB007312D0 /* SetUpWeightViewController.swift */,
+				EA4121A421E6A313009CD6B0 /* CollectionViewCell2.swift */,
+				EA4121A021E69F34009CD6B0 /* CollectionViewCell.swift */,
+			);
+			path = "Weight Scale Part";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +271,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EA41219321E408CB009CD6B0 /* Build configuration list for PBXNativeTarget "FitFi AutoTracking" */;
 			buildPhases = (
+				1CB7713010018F37E1FE11DD /* [CP] Check Pods Manifest.lock */,
 				EA41216421E408C9009CD6B0 /* Sources */,
 				EA41216521E408C9009CD6B0 /* Frameworks */,
 				EA41216621E408C9009CD6B0 /* Resources */,
+				03BF4EB38F3A3B81239728F2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +290,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EA41219621E408CB009CD6B0 /* Build configuration list for PBXNativeTarget "FitFi AutoTrackingTests" */;
 			buildPhases = (
+				A8EEE9DE17D8CEF4FEF7FA02 /* [CP] Check Pods Manifest.lock */,
 				EA41217B21E408CB009CD6B0 /* Sources */,
 				EA41217C21E408CB009CD6B0 /* Frameworks */,
 				EA41217D21E408CB009CD6B0 /* Resources */,
@@ -170,6 +309,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EA41219921E408CB009CD6B0 /* Build configuration list for PBXNativeTarget "FitFi AutoTrackingUITests" */;
 			buildPhases = (
+				B3114D0E87C33FC2F5FF882F /* [CP] Check Pods Manifest.lock */,
 				EA41218621E408CB009CD6B0 /* Sources */,
 				EA41218721E408CB009CD6B0 /* Frameworks */,
 				EA41218821E408CB009CD6B0 /* Resources */,
@@ -232,8 +372,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAD6755021EE4456007312D0 /* SignInSignUp.storyboard in Resources */,
 				EA41217921E408CB009CD6B0 /* LaunchScreen.storyboard in Resources */,
 				EA41217621E408CB009CD6B0 /* Assets.xcassets in Resources */,
+				EAD6757221EF8CEE007312D0 /* SetUpProfileCollectionViewCell.xib in Resources */,
 				EA41217121E408C9009CD6B0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -242,6 +384,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAD6757321EF8CEE007312D0 /* SetUpProfileCollectionViewCell.xib in Resources */,
+				EAD6755121EE4456007312D0 /* SignInSignUp.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,19 +393,120 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAD6757421EF8CEE007312D0 /* SetUpProfileCollectionViewCell.xib in Resources */,
+				EAD6755221EE4456007312D0 /* SignInSignUp.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		03BF4EB38F3A3B81239728F2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-FitFi AutoTracking/Pods-FitFi AutoTracking-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookShare/FacebookShare.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookShare.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FitFi AutoTracking/Pods-FitFi AutoTracking-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1CB7713010018F37E1FE11DD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FitFi AutoTracking-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A8EEE9DE17D8CEF4FEF7FA02 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FitFi AutoTrackingTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B3114D0E87C33FC2F5FF882F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FitFi AutoTrackingUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EA41216421E408C9009CD6B0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA41216E21E408C9009CD6B0 /* ViewController.swift in Sources */,
+				EAD6756F21EF8CEE007312D0 /* SetUpProfileCollectionViewCell.swift in Sources */,
+				EA13246F21F0604400B202D5 /* FinishProfileSetupVC.swift in Sources */,
+				EAD6754421ED1CE0007312D0 /* SignInSignUpInitialVC.swift in Sources */,
 				EA41216C21E408C9009CD6B0 /* AppDelegate.swift in Sources */,
+				EAFEB36E21F10CEF005D8C9F /* SetGoalsViewController.swift in Sources */,
+				EA4121A521E6A313009CD6B0 /* CollectionViewCell2.swift in Sources */,
+				EA4121A121E69F34009CD6B0 /* CollectionViewCell.swift in Sources */,
+				EAD6755521EE47ED007312D0 /* SocialDetailsViewController.swift in Sources */,
+				EA13247321F06C9800B202D5 /* ProfileSetupTableViewCell.swift in Sources */,
+				EAD6754821ED1E0F007312D0 /* FeedViewController.swift in Sources */,
+				EAFEB36A21F0E4C3005D8C9F /* PickerViewLauncher.swift in Sources */,
 				EA41217421E408C9009CD6B0 /* FitFi_AutoTracking.xcdatamodeld in Sources */,
+				EA13246B21F0578F00B202D5 /* SelectAgeViewController.swift in Sources */,
+				EAD6755A21EE6BC0007312D0 /* AccountInfo.swift in Sources */,
+				EAD6754C21ED27CB007312D0 /* SetUpWeightViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,7 +514,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA13247021F0604400B202D5 /* FinishProfileSetupVC.swift in Sources */,
+				EA4121A621E6A313009CD6B0 /* CollectionViewCell2.swift in Sources */,
+				EA4121A221E69F34009CD6B0 /* CollectionViewCell.swift in Sources */,
+				EA13246C21F0578F00B202D5 /* SelectAgeViewController.swift in Sources */,
+				EAFEB36F21F10CEF005D8C9F /* SetGoalsViewController.swift in Sources */,
+				EAD6754921ED1E0F007312D0 /* FeedViewController.swift in Sources */,
+				EAD6757021EF8CEE007312D0 /* SetUpProfileCollectionViewCell.swift in Sources */,
+				EAD6754521ED1CE0007312D0 /* SignInSignUpInitialVC.swift in Sources */,
+				EA13247421F06C9800B202D5 /* ProfileSetupTableViewCell.swift in Sources */,
+				EAD6754D21ED27CB007312D0 /* SetUpWeightViewController.swift in Sources */,
+				EAD6755B21EE6BC0007312D0 /* AccountInfo.swift in Sources */,
+				EAFEB36B21F0E4C3005D8C9F /* PickerViewLauncher.swift in Sources */,
 				EA41218421E408CB009CD6B0 /* FitFi_AutoTrackingTests.swift in Sources */,
+				EAD6755621EE47ED007312D0 /* SocialDetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,7 +535,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA13247121F0604400B202D5 /* FinishProfileSetupVC.swift in Sources */,
+				EA4121A721E6A313009CD6B0 /* CollectionViewCell2.swift in Sources */,
+				EA4121A321E69F34009CD6B0 /* CollectionViewCell.swift in Sources */,
+				EA13246D21F0578F00B202D5 /* SelectAgeViewController.swift in Sources */,
+				EAFEB37021F10CEF005D8C9F /* SetGoalsViewController.swift in Sources */,
+				EAD6754A21ED1E0F007312D0 /* FeedViewController.swift in Sources */,
+				EAD6757121EF8CEE007312D0 /* SetUpProfileCollectionViewCell.swift in Sources */,
+				EAD6754621ED1CE0007312D0 /* SignInSignUpInitialVC.swift in Sources */,
+				EA13247521F06C9800B202D5 /* ProfileSetupTableViewCell.swift in Sources */,
+				EAD6754E21ED27CC007312D0 /* SetUpWeightViewController.swift in Sources */,
+				EAD6755C21EE6BC0007312D0 /* AccountInfo.swift in Sources */,
+				EAFEB36C21F0E4C3005D8C9F /* PickerViewLauncher.swift in Sources */,
 				EA41218F21E408CB009CD6B0 /* FitFi_AutoTrackingUITests.swift in Sources */,
+				EAD6755721EE47ED007312D0 /* SocialDetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,6 +642,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -425,6 +697,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -434,6 +707,7 @@
 		};
 		EA41219421E408CB009CD6B0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF550A7EF895F51C7BB8D9C7 /* Pods-FitFi AutoTracking.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -452,6 +726,7 @@
 		};
 		EA41219521E408CB009CD6B0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 963823C1FE2042134DA565BF /* Pods-FitFi AutoTracking.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -470,6 +745,7 @@
 		};
 		EA41219721E408CB009CD6B0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B291D93F89AA4BEC8B4FCDE5 /* Pods-FitFi AutoTrackingTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -491,6 +767,7 @@
 		};
 		EA41219821E408CB009CD6B0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B13DDF5C6B3DEDE4B9DA5792 /* Pods-FitFi AutoTrackingTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -512,6 +789,7 @@
 		};
 		EA41219A21E408CB009CD6B0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F857A541CEA7DB6FD439216 /* Pods-FitFi AutoTrackingUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -532,6 +810,7 @@
 		};
 		EA41219B21E408CB009CD6B0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 96C8561DE189CEE511257FAD /* Pods-FitFi AutoTrackingUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
