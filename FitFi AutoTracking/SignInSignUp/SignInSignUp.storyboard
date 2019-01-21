@@ -53,50 +53,28 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="sB8-P1-fU2"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="35"/>
-                                <state key="normal" title="Next">
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="28"/>
+                                <state key="normal" title="NEXT">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="nextButtonPressed:" destination="0bh-LM-BvP" eventType="touchUpInside" id="0mw-Ec-e3z"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="dbU-A5-Lei">
-                                <rect key="frame" x="20" y="224" width="374" height="130"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="543-LP-0BW">
-                                        <rect key="frame" x="0.0" y="0.0" width="177" height="130"/>
-                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="60"/>
-                                        <state key="normal" title="M"/>
-                                        <connections>
-                                            <action selector="maleButtonTapped:" destination="0bh-LM-BvP" eventType="touchUpInside" id="alu-pU-Q3j"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Abh-4i-luW">
-                                        <rect key="frame" x="197" y="0.0" width="177" height="130"/>
-                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="60"/>
-                                        <state key="normal" title="F"/>
-                                        <connections>
-                                            <action selector="femaleButtonTapped:" destination="0bh-LM-BvP" eventType="touchUpInside" id="2as-u5-Hzg"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="130" id="2ZJ-sy-Rao"/>
-                                </constraints>
-                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="XHP-xs-GxD" firstAttribute="leading" secondItem="8UK-Oz-ePD" secondAttribute="leading" constant="20" id="0vo-M8-Kwa"/>
-                            <constraint firstItem="8UK-Oz-ePD" firstAttribute="trailing" secondItem="dbU-A5-Lei" secondAttribute="trailing" constant="20" id="4wN-mM-aqo"/>
                             <constraint firstItem="8UK-Oz-ePD" firstAttribute="trailing" secondItem="XHP-xs-GxD" secondAttribute="trailing" id="FF6-ZU-rdE"/>
                             <constraint firstItem="Wdm-2W-0Kh" firstAttribute="leading" secondItem="8UK-Oz-ePD" secondAttribute="leading" constant="20" id="a26-KD-aQ5"/>
                             <constraint firstItem="8UK-Oz-ePD" firstAttribute="trailing" secondItem="Wdm-2W-0Kh" secondAttribute="trailing" constant="20" id="pcw-X7-Z3a"/>
-                            <constraint firstItem="dbU-A5-Lei" firstAttribute="top" secondItem="XHP-xs-GxD" secondAttribute="bottom" constant="10" id="q3y-07-9cP"/>
                             <constraint firstItem="8UK-Oz-ePD" firstAttribute="bottom" secondItem="Wdm-2W-0Kh" secondAttribute="bottom" constant="10" id="rZj-5A-4qa"/>
                             <constraint firstItem="XHP-xs-GxD" firstAttribute="top" secondItem="8UK-Oz-ePD" secondAttribute="top" constant="120" id="yk4-3t-uKI"/>
-                            <constraint firstItem="dbU-A5-Lei" firstAttribute="leading" secondItem="8UK-Oz-ePD" secondAttribute="leading" constant="20" id="yta-bK-2Io"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8UK-Oz-ePD"/>
                     </view>
@@ -108,8 +86,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="femaleButton" destination="Abh-4i-luW" id="27g-eb-Znh"/>
-                        <outlet property="maleButton" destination="543-LP-0BW" id="1lr-7V-kfO"/>
                         <outlet property="nextButton" destination="Wdm-2W-0Kh" id="LZR-02-dBT"/>
                         <segue destination="7hR-Wr-T5f" kind="push" identifier="goToFinishProfileSetupVC" id="cFi-j4-N9p"/>
                     </connections>
@@ -157,10 +133,13 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ogp-Vh-p56">
-                                <rect key="frame" x="20" y="672" width="374" height="54"/>
+                                <rect key="frame" x="20" y="666" width="374" height="60"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="35"/>
-                                <state key="normal" title="Next">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Z4e-W8-OAx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="28"/>
+                                <state key="normal" title="NEXT">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -199,6 +178,16 @@
                     <view key="view" contentMode="scaleToFill" id="NpI-tG-ueK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b3D-bh-43P">
+                                <rect key="frame" x="184" y="622" width="107" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Go To App"/>
+                                <connections>
+                                    <action selector="goToAppButtonPressed:" destination="kn6-we-YtR" eventType="touchUpInside" id="ZIg-c6-g8G"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="1ph-3s-G7t"/>
                     </view>
@@ -206,7 +195,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dxv-YO-pwy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3083" y="-814"/>
+            <point key="canvasLocation" x="3082.608695652174" y="-814.4021739130435"/>
         </scene>
         <!--Social Details View Controller-->
         <scene sceneID="Ac2-c6-s9e">

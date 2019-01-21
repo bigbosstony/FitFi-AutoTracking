@@ -62,6 +62,9 @@
 		EAFEB36E21F10CEF005D8C9F /* SetGoalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFEB36D21F10CEF005D8C9F /* SetGoalsViewController.swift */; };
 		EAFEB36F21F10CEF005D8C9F /* SetGoalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFEB36D21F10CEF005D8C9F /* SetGoalsViewController.swift */; };
 		EAFEB37021F10CEF005D8C9F /* SetGoalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFEB36D21F10CEF005D8C9F /* SetGoalsViewController.swift */; };
+		EAFEB37221F26F47005D8C9F /* ButtonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFEB37121F26F47005D8C9F /* ButtonExtensions.swift */; };
+		EAFEB37321F26F47005D8C9F /* ButtonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFEB37121F26F47005D8C9F /* ButtonExtensions.swift */; };
+		EAFEB37421F26F47005D8C9F /* ButtonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFEB37121F26F47005D8C9F /* ButtonExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +120,7 @@
 		EAD6756E21EF8CEE007312D0 /* SetUpProfileCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SetUpProfileCollectionViewCell.xib; sourceTree = "<group>"; };
 		EAFEB36921F0E4C3005D8C9F /* PickerViewLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewLauncher.swift; sourceTree = "<group>"; };
 		EAFEB36D21F10CEF005D8C9F /* SetGoalsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetGoalsViewController.swift; sourceTree = "<group>"; };
+		EAFEB37121F26F47005D8C9F /* ButtonExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonExtensions.swift; sourceTree = "<group>"; };
 		EF550A7EF895F51C7BB8D9C7 /* Pods-FitFi AutoTracking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitFi AutoTracking.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FitFi AutoTracking/Pods-FitFi AutoTracking.debug.xcconfig"; sourceTree = "<group>"; };
 		FAADAC7760766F103F3C40E1 /* Pods_FitFi_AutoTrackingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FitFi_AutoTrackingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -200,6 +204,7 @@
 				EA41216B21E408C9009CD6B0 /* AppDelegate.swift */,
 				EA41216F21E408C9009CD6B0 /* Main.storyboard */,
 				EAD6754721ED1E0F007312D0 /* FeedViewController.swift */,
+				EAFEB37521F26F52005D8C9F /* Extension */,
 				EAD6755821EE6BAB007312D0 /* Helpers */,
 				EAD6755321EE448A007312D0 /* SignInSignUp */,
 				EA41217521E408CB009CD6B0 /* Assets.xcassets */,
@@ -262,6 +267,14 @@
 				EA4121A021E69F34009CD6B0 /* CollectionViewCell.swift */,
 			);
 			path = "Weight Scale Part";
+			sourceTree = "<group>";
+		};
+		EAFEB37521F26F52005D8C9F /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				EAFEB37121F26F47005D8C9F /* ButtonExtensions.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -505,6 +518,7 @@
 				EAFEB36A21F0E4C3005D8C9F /* PickerViewLauncher.swift in Sources */,
 				EA41217421E408C9009CD6B0 /* FitFi_AutoTracking.xcdatamodeld in Sources */,
 				EA13246B21F0578F00B202D5 /* SelectAgeViewController.swift in Sources */,
+				EAFEB37221F26F47005D8C9F /* ButtonExtensions.swift in Sources */,
 				EAD6755A21EE6BC0007312D0 /* AccountInfo.swift in Sources */,
 				EAD6754C21ED27CB007312D0 /* SetUpWeightViewController.swift in Sources */,
 			);
@@ -523,6 +537,7 @@
 				EAD6757021EF8CEE007312D0 /* SetUpProfileCollectionViewCell.swift in Sources */,
 				EAD6754521ED1CE0007312D0 /* SignInSignUpInitialVC.swift in Sources */,
 				EA13247421F06C9800B202D5 /* ProfileSetupTableViewCell.swift in Sources */,
+				EAFEB37321F26F47005D8C9F /* ButtonExtensions.swift in Sources */,
 				EAD6754D21ED27CB007312D0 /* SetUpWeightViewController.swift in Sources */,
 				EAD6755B21EE6BC0007312D0 /* AccountInfo.swift in Sources */,
 				EAFEB36B21F0E4C3005D8C9F /* PickerViewLauncher.swift in Sources */,
@@ -544,6 +559,7 @@
 				EAD6757121EF8CEE007312D0 /* SetUpProfileCollectionViewCell.swift in Sources */,
 				EAD6754621ED1CE0007312D0 /* SignInSignUpInitialVC.swift in Sources */,
 				EA13247521F06C9800B202D5 /* ProfileSetupTableViewCell.swift in Sources */,
+				EAFEB37421F26F47005D8C9F /* ButtonExtensions.swift in Sources */,
 				EAD6754E21ED27CC007312D0 /* SetUpWeightViewController.swift in Sources */,
 				EAD6755C21EE6BC0007312D0 /* AccountInfo.swift in Sources */,
 				EAFEB36C21F0E4C3005D8C9F /* PickerViewLauncher.swift in Sources */,

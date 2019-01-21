@@ -11,8 +11,6 @@ import FacebookLogin
 
 class SelectAgeViewController: UIViewController {
 
-    @IBOutlet weak var maleButton: UIButton!
-    @IBOutlet weak var femaleButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
     
     var userInfo = userAccountInfoFacebook() {
@@ -25,21 +23,20 @@ class SelectAgeViewController: UIViewController {
     
     var gender: [Bool] = [false, false] {
         didSet {
-            nextButton.backgroundColor = UIColor.blue
+            nextButton.backgroundColor = UIColor.init(red: 246/255, green: 120/255, blue: 12/255, alpha: 1)
             if gender[0] {
-                maleButton.backgroundColor = UIColor.blue
-                maleButton.setTitleColor(UIColor.white, for: .normal)
-                femaleButton.backgroundColor = UIColor.white
-                femaleButton.setTitleColor(UIColor.blue, for: .normal)
+                maleButton.alpha = 1
+                femaleButton.alpha = 0.25
             } else {
-                femaleButton.backgroundColor = UIColor.blue
-                femaleButton.setTitleColor(UIColor.white, for: .normal)
-                maleButton.backgroundColor = UIColor.white
-                maleButton.setTitleColor(UIColor.blue, for: .normal)
+                maleButton.alpha = 0.25
+                femaleButton.alpha = 1
             }
         }
     }
     
+    var femaleButton = UIButton()
+    var maleButton = UIButton()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,19 +44,41 @@ class SelectAgeViewController: UIViewController {
         //Hide Tab bar border
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
+        
+        let femaleImage = UIImage(named: "Icons/genderFemale")
+        let maleImage = UIImage(named: "Icons/genderMale")
+        
+        let sideLength = self.view.frame.width / 2 - 30
+        
+        
+        femaleButton = UIButton(frame: CGRect(x: 20, y: 215, width: sideLength, height: sideLength))
+        femaleButton.imageView?.contentMode = UIView.ContentMode.scaleAspectFit
+        femaleButton.setImage(femaleImage, for: UIControl.State.normal)
+        femaleButton.addTarget(self, action: #selector(femaleButtonPressed), for: UIControl.Event.touchUpInside)
+        femaleButton.alpha = 0.25
+        
+        maleButton = UIButton(frame: CGRect(x: (20 + sideLength + 10), y: 215, width: sideLength, height: sideLength))
+        maleButton.imageView?.contentMode = UIView.ContentMode.scaleAspectFit
+        maleButton.setImage(maleImage, for: UIControl.State.normal)
+        maleButton.addTarget(self, action: #selector(maleButtonPressed), for: UIControl.Event.touchUpInside)
+        maleButton.alpha = 0.25
+        
+        view.addSubview(femaleButton)
+        view.addSubview(maleButton)
+    }
 
-    }
-    
-    @IBAction func maleButtonTapped(_ sender: UIButton) {
-        userInfo.gender = 0
-        gender[0] = true
-        gender[1] = false
-    }
-    
-    @IBAction func femaleButtonTapped(_ sender: UIButton) {
+    @objc func femaleButtonPressed() {
+        femaleButton.pulsate()
         userInfo.gender = 1
         gender[0] = false
         gender[1] = true
+    }
+    
+    @objc func maleButtonPressed() {
+        maleButton.pulsate()
+        userInfo.gender = 0
+        gender[0] = true
+        gender[1] = false
     }
     
     /*
@@ -81,6 +100,8 @@ class SelectAgeViewController: UIViewController {
         for value in gender {
             if value {
                 performSegue(withIdentifier: "goToFinishProfileSetupVC", sender: self)
+            } else {
+                sender.shake()
             }
         }
     }

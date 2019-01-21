@@ -30,7 +30,7 @@ class FinishProfileSetupVC: UIViewController {
             let next = fieldDataArray.contains { $0 == nil }
             if !next {
                 goNext = true
-                nextButton.backgroundColor = UIColor.blue
+                nextButton.backgroundColor = UIColor.init(red: 246/255, green: 120/255, blue: 12/255, alpha: 1)
             }
         }
     }
@@ -96,6 +96,10 @@ class FinishProfileSetupVC: UIViewController {
         
         pickerView.delegate = self
         pickerView.backgroundColor = UIColor.black
+        
+//        self.navigationItem.hidesBackButton = true
+        
+        nextButton.layer.cornerRadius = 5.0
     }
     
     @IBAction func nextButtonPressed(_ sender: UIButton) {
