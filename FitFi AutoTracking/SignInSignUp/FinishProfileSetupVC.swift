@@ -81,7 +81,7 @@ class FinishProfileSetupVC: UIViewController {
     
     let blackView = UIView()
     let pickerView = UIPickerView()
-    
+    let toolBar = UIToolbar()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -121,16 +121,17 @@ class FinishProfileSetupVC: UIViewController {
         key = row
         
         if let window = UIApplication.shared.keyWindow {
-            blackView.backgroundColor = UIColor(white: 0, alpha: 0.5)
             
+            blackView.backgroundColor = UIColor(white: 0, alpha: 0.5)
             blackView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleDismiss)))
             
             window.addSubview(blackView)
             window.addSubview(pickerView)
+            window.addSubview(toolBar)
             
-            let height: CGFloat = 200
+            let height: CGFloat = 250
             let x: CGFloat = 0
-            let y = window.frame.height - 200
+            let y = window.frame.height - height
             let width = window.frame.width
             
             pickerView.frame = CGRect(x: x, y: window.frame.height, width: width, height: height)
@@ -138,9 +139,23 @@ class FinishProfileSetupVC: UIViewController {
             blackView.frame = window.frame
             blackView.alpha = 0
             
+            toolBar.sizeToFit()
+            toolBar.frame = CGRect(x: x, y: window.frame.height, width: width, height: 44)
+            let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(handleDismiss))
+            let flexButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
+            let fixButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.fixedSpace, target: nil, action: nil)
+            fixButton.width = 20.0
+            
+            toolBar.setItems([flexButton, doneButton, fixButton], animated: false)
+            toolBar.isUserInteractionEnabled = true
+            
+            toolBar.barTintColor = .black
+            toolBar.tintColor = .white
+            
             UIView.animate(withDuration: 0.5, delay: 0.2, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
                 self.blackView.alpha = 1
                 self.pickerView.frame = CGRect(x: x, y: y, width: width, height: height)
+                self.toolBar.frame = CGRect(x: 0, y: y - 44, width: width, height: 44)
             }, completion: nil)
         }
     }
@@ -151,8 +166,10 @@ class FinishProfileSetupVC: UIViewController {
             
             if let window = UIApplication.shared.keyWindow {
                 self.pickerView.frame = CGRect(x: 0, y: window.frame.height, width: self.pickerView.frame.width, height: self.pickerView.frame.height)
+                self.toolBar.frame = CGRect(x: 0, y: window.frame.height, width: self.toolBar.frame.width, height: self.toolBar.frame.height)
             }
             self.view.willRemoveSubview(self.pickerView)
+            self.view.willRemoveSubview(self.toolBar)
         }
     }
 }

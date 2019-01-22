@@ -20,7 +20,8 @@ class SignInSignUpInitialVC: UIViewController {
     var idFB = ""
     
 
-    
+    let loginManager = LoginManager()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -51,8 +52,6 @@ class SignInSignUpInitialVC: UIViewController {
     
     // Once the button is clicked, show the login dialog
     @objc func loginButtonClicked() {
-        let loginManager = LoginManager()
-        
         loginManager.logIn(readPermissions: [.publicProfile, .email], viewController: self) { (LoginResult) in
             switch LoginResult {
             case .failed(let error):
@@ -94,7 +93,9 @@ class SignInSignUpInitialVC: UIViewController {
                     self.lastNameFB = responseDictionary["last_name"] as? String ?? ""
                     self.emailFB = responseDictionary["email"] as? String ?? ""
                     self.idFB = responseDictionary["id"] as? String ?? ""
+                    
                     self.makeCallToServer()
+                    
                 }
             case .failed(_): break
             }
@@ -128,6 +129,26 @@ class SignInSignUpInitialVC: UIViewController {
         
         let task = session.dataTask(with: request, completionHandler: { (data, response, error) in
             
+            if let response = response as? HTTPURLResponse {
+                
+                let statusCode = response.statusCode
+                
+                print("Response Status Code: ", response.statusCode)
+                
+                if statusCode == 200 {
+                    
+                } else if statusCode == 500 {
+                    print("Inernal Server Error")
+                    //Log out facebook
+                    self.loginManager.logOut()
+                    self.proceed(with: false)
+                }
+            }
+            
+            if let error = error {
+                print("Error: ", error)
+            }
+            
             guard let data = data else { print("no data return"); return }
             
             do {
@@ -138,26 +159,7 @@ class SignInSignUpInitialVC: UIViewController {
                 DispatchQueue.main.async {
                     if Thread.isMainThread {
                         print("Thread is main")
-                        //If user has account with us go to home page
-                        if status {
-                            print("User Exist")
-                            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                            let newViewController = storyBoard.instantiateViewController(withIdentifier: "FeedViewController")
-                            self.present(newViewController, animated: true, completion: nil)
-                        }
-                            //If user has no account with us, finish register
-                        else {
-                            print("User Not Exist")
-                            let storyBoard: UIStoryboard = UIStoryboard(name: "SignInSignUp", bundle: nil)
-                            let newNavController: UINavigationController = storyBoard.instantiateViewController(withIdentifier: "finishSignUpDetailWithSocialAccountNC") as UIViewController as! UINavigationController
-                            let destinationVC = newNavController.viewControllers.first as! SelectAgeViewController
-                            destinationVC.userInfo.emailAddress = self.emailFB
-                            destinationVC.userInfo.facebookID = self.idFB
-                            destinationVC.userInfo.firstName = self.firstNameFB
-                            destinationVC.userInfo.lastName = self.lastNameFB
-
-                            self.present(newNavController, animated: true, completion: nil)
-                        }
+                        self.proceed(with: status)
                     }
                 }
             } catch {
@@ -166,6 +168,31 @@ class SignInSignUpInitialVC: UIViewController {
         })
         task.resume()
     }
+    
+    func proceed(with status: Bool) {
+        //If user has account with us go to home page
+        if status {
+            print("User Exist")
+            //TODO: download user data to local
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let newViewController = storyBoard.instantiateViewController(withIdentifier: "FeedViewController")
+            self.present(newViewController, animated: true, completion: nil)
+        }
+            //If user has no account with us, finish register
+        else {
+            print("User Not Exist")
+            let storyBoard: UIStoryboard = UIStoryboard(name: "SignInSignUp", bundle: nil)
+            let newNavController: UINavigationController = storyBoard.instantiateViewController(withIdentifier: "finishSignUpDetailWithSocialAccountNC") as UIViewController as! UINavigationController
+            let destinationVC = newNavController.viewControllers.first as! SelectAgeViewController
+            destinationVC.userInfo.emailAddress = self.emailFB
+            destinationVC.userInfo.facebookID = self.idFB
+            destinationVC.userInfo.firstName = self.firstNameFB
+            destinationVC.userInfo.lastName = self.lastNameFB
+            
+            self.present(newNavController, animated: true, completion: nil)
+        }
+    }
+    
 }
 
 
