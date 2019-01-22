@@ -129,7 +129,7 @@ class FinishProfileSetupVC: UIViewController {
             window.addSubview(pickerView)
             window.addSubview(toolBar)
             
-            let height: CGFloat = 250
+            let height: CGFloat = window.frame.height / 3 - 44
             let x: CGFloat = 0
             let y = window.frame.height - height
             let width = window.frame.width

@@ -9,6 +9,7 @@
 import UIKit
 import FacebookLogin
 import FacebookCore
+import SVProgressHUD
 
 class SignInSignUpInitialVC: UIViewController {
     
@@ -21,6 +22,7 @@ class SignInSignUpInitialVC: UIViewController {
     
 
     let loginManager = LoginManager()
+    let loadingView = UIVisualEffectView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,7 +48,9 @@ class SignInSignUpInitialVC: UIViewController {
         // Add the button to the view
         view.addSubview(myLoginButton)
         
-        
+        let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.light)
+        loadingView.effect = blurEffect
+        loadingView.frame = self.view.bounds
 //        self.navigationController?.view.addSubview()
     }
     
@@ -64,6 +68,21 @@ class SignInSignUpInitialVC: UIViewController {
                 print(grantedPermissions)
                 print(declinedPermissions)
                 print(token)
+                
+                //TODO: Add Loading View
+                self.loadingView.alpha = 1
+                self.view.addSubview(self.loadingView)
+                SVProgressHUD.show()
+
+//                if let window = UIApplication.shared.keyWindow {
+////                    self.loadingView.backgroundColor = UIColor(white: 0, alpha: 0.5)
+//
+//                    //TODO: Add Loading View
+//                    window.addSubview(self.loadingView)
+//                    SVProgressHUD.show()
+//
+//                    self.loadingView.frame = window.frame
+//                }
                 
                 // GraphRequest for Facebook
 //                let graphRequest : GraphRequest = GraphRequest(graphPath: "me", parameters: [ "fields": "id, email, name, first_name, last_name, age_range, locale, timezone, gender,  picture.width(480).height(480)"] )
@@ -139,9 +158,13 @@ class SignInSignUpInitialVC: UIViewController {
                     
                 } else if statusCode == 500 {
                     print("Inernal Server Error")
-                    //Log out facebook
-                    self.loginManager.logOut()
-                    self.proceed(with: false)
+                    //TODO: Log out facebook
+                    DispatchQueue.main.async {
+                        self.loginManager.logOut()
+//                        self.loadingView.alpha = 0
+
+                        self.proceed(with: false)
+                    }
                 }
             }
             
@@ -176,6 +199,11 @@ class SignInSignUpInitialVC: UIViewController {
             //TODO: download user data to local
             let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let newViewController = storyBoard.instantiateViewController(withIdentifier: "FeedViewController")
+            
+            //TODO: Renove loading view
+            self.loadingView.alpha = 0
+            SVProgressHUD.dismiss()
+
             self.present(newViewController, animated: true, completion: nil)
         }
             //If user has no account with us, finish register
@@ -188,6 +216,11 @@ class SignInSignUpInitialVC: UIViewController {
             destinationVC.userInfo.facebookID = self.idFB
             destinationVC.userInfo.firstName = self.firstNameFB
             destinationVC.userInfo.lastName = self.lastNameFB
+            
+            
+            //TODO: Renove loading view
+            self.loadingView.alpha = 0
+            SVProgressHUD.dismiss()
             
             self.present(newNavController, animated: true, completion: nil)
         }
