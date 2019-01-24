@@ -37,7 +37,6 @@ class SignInSignUpInitialVC: UIViewController {
         
         // Add a custom login button to your app
         let myLoginButton = BounceButton(type: .custom)
-//        let myLoginButton = UIButton(type: .custom)
         myLoginButton.backgroundColor = UIColor(red: 57/255, green: 86/255, blue: 156/255, alpha: 1)
         myLoginButton.layer.cornerRadius = 4
         myLoginButton.frame = CGRect(x: 0, y: 0, width: 300, height: 40)
