@@ -56,6 +56,9 @@
 		EAD6757221EF8CEE007312D0 /* SetUpProfileCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAD6756E21EF8CEE007312D0 /* SetUpProfileCollectionViewCell.xib */; };
 		EAD6757321EF8CEE007312D0 /* SetUpProfileCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAD6756E21EF8CEE007312D0 /* SetUpProfileCollectionViewCell.xib */; };
 		EAD6757421EF8CEE007312D0 /* SetUpProfileCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAD6756E21EF8CEE007312D0 /* SetUpProfileCollectionViewCell.xib */; };
+		EAF4A67521FA4F300095E18A /* BounceButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF4A67421FA4F300095E18A /* BounceButton.swift */; };
+		EAF4A67621FA4F300095E18A /* BounceButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF4A67421FA4F300095E18A /* BounceButton.swift */; };
+		EAF4A67721FA4F300095E18A /* BounceButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF4A67421FA4F300095E18A /* BounceButton.swift */; };
 		EAFEB36A21F0E4C3005D8C9F /* PickerViewLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFEB36921F0E4C3005D8C9F /* PickerViewLauncher.swift */; };
 		EAFEB36B21F0E4C3005D8C9F /* PickerViewLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFEB36921F0E4C3005D8C9F /* PickerViewLauncher.swift */; };
 		EAFEB36C21F0E4C3005D8C9F /* PickerViewLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFEB36921F0E4C3005D8C9F /* PickerViewLauncher.swift */; };
@@ -118,6 +121,7 @@
 		EAD6755921EE6BC0007312D0 /* AccountInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountInfo.swift; sourceTree = "<group>"; };
 		EAD6756D21EF8CEE007312D0 /* SetUpProfileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetUpProfileCollectionViewCell.swift; sourceTree = "<group>"; };
 		EAD6756E21EF8CEE007312D0 /* SetUpProfileCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SetUpProfileCollectionViewCell.xib; sourceTree = "<group>"; };
+		EAF4A67421FA4F300095E18A /* BounceButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BounceButton.swift; sourceTree = "<group>"; };
 		EAFEB36921F0E4C3005D8C9F /* PickerViewLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewLauncher.swift; sourceTree = "<group>"; };
 		EAFEB36D21F10CEF005D8C9F /* SetGoalsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetGoalsViewController.swift; sourceTree = "<group>"; };
 		EAFEB37121F26F47005D8C9F /* ButtonExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonExtensions.swift; sourceTree = "<group>"; };
@@ -204,6 +208,7 @@
 				EA41216B21E408C9009CD6B0 /* AppDelegate.swift */,
 				EA41216F21E408C9009CD6B0 /* Main.storyboard */,
 				EAD6754721ED1E0F007312D0 /* FeedViewController.swift */,
+				EAF4A67821FA4F360095E18A /* CustomControls */,
 				EAFEB37521F26F52005D8C9F /* Extension */,
 				EAD6755821EE6BAB007312D0 /* Helpers */,
 				EAD6755321EE448A007312D0 /* SignInSignUp */,
@@ -267,6 +272,14 @@
 				EA4121A021E69F34009CD6B0 /* CollectionViewCell.swift */,
 			);
 			path = "Weight Scale Part";
+			sourceTree = "<group>";
+		};
+		EAF4A67821FA4F360095E18A /* CustomControls */ = {
+			isa = PBXGroup;
+			children = (
+				EAF4A67421FA4F300095E18A /* BounceButton.swift */,
+			);
+			path = CustomControls;
 			sourceTree = "<group>";
 		};
 		EAFEB37521F26F52005D8C9F /* Extension */ = {
@@ -515,6 +528,7 @@
 				EA4121A521E6A313009CD6B0 /* CollectionViewCell2.swift in Sources */,
 				EA4121A121E69F34009CD6B0 /* CollectionViewCell.swift in Sources */,
 				EAD6755521EE47ED007312D0 /* SocialDetailsViewController.swift in Sources */,
+				EAF4A67521FA4F300095E18A /* BounceButton.swift in Sources */,
 				EA13247321F06C9800B202D5 /* ProfileSetupTableViewCell.swift in Sources */,
 				EAD6754821ED1E0F007312D0 /* FeedViewController.swift in Sources */,
 				EAFEB36A21F0E4C3005D8C9F /* PickerViewLauncher.swift in Sources */,
@@ -535,6 +549,7 @@
 				EA4121A221E69F34009CD6B0 /* CollectionViewCell.swift in Sources */,
 				EA13246C21F0578F00B202D5 /* SelectAgeViewController.swift in Sources */,
 				EAFEB36F21F10CEF005D8C9F /* SetGoalsViewController.swift in Sources */,
+				EAF4A67621FA4F300095E18A /* BounceButton.swift in Sources */,
 				EAD6754921ED1E0F007312D0 /* FeedViewController.swift in Sources */,
 				EAD6757021EF8CEE007312D0 /* SetUpProfileCollectionViewCell.swift in Sources */,
 				EAD6754521ED1CE0007312D0 /* SignInSignUpInitialVC.swift in Sources */,
@@ -557,6 +572,7 @@
 				EA4121A321E69F34009CD6B0 /* CollectionViewCell.swift in Sources */,
 				EA13246D21F0578F00B202D5 /* SelectAgeViewController.swift in Sources */,
 				EAFEB37021F10CEF005D8C9F /* SetGoalsViewController.swift in Sources */,
+				EAF4A67721FA4F300095E18A /* BounceButton.swift in Sources */,
 				EAD6754A21ED1E0F007312D0 /* FeedViewController.swift in Sources */,
 				EAD6757121EF8CEE007312D0 /* SetUpProfileCollectionViewCell.swift in Sources */,
 				EAD6754621ED1CE0007312D0 /* SignInSignUpInitialVC.swift in Sources */,
@@ -731,7 +747,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W238KMYFQL;
 				INFOPLIST_FILE = "FitFi AutoTracking/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "ai.fitfi.FitFi-AutoTracking";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -747,7 +766,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W238KMYFQL;
 				INFOPLIST_FILE = "FitFi AutoTracking/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "ai.fitfi.FitFi-AutoTracking";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -764,7 +786,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W238KMYFQL;
 				INFOPLIST_FILE = "FitFi AutoTrackingTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "ai.fitfi.FitFi-AutoTrackingTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -782,7 +808,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W238KMYFQL;
 				INFOPLIST_FILE = "FitFi AutoTrackingTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "ai.fitfi.FitFi-AutoTrackingTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -799,7 +829,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W238KMYFQL;
 				INFOPLIST_FILE = "FitFi AutoTrackingUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "ai.fitfi.FitFi-AutoTrackingUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -816,7 +850,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W238KMYFQL;
 				INFOPLIST_FILE = "FitFi AutoTrackingUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "ai.fitfi.FitFi-AutoTrackingUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;

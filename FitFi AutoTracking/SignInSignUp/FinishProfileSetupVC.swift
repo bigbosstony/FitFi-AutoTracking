@@ -105,6 +105,8 @@ class FinishProfileSetupVC: UIViewController {
     @IBAction func nextButtonPressed(_ sender: UIButton) {
         if goNext {
             performSegue(withIdentifier: "goToSetGoalsVC", sender: self)
+        } else {
+            sender.shake()
         }
     }
     

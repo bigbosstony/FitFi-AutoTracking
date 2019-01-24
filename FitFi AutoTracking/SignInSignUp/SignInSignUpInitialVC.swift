@@ -33,10 +33,11 @@ class SignInSignUpInitialVC: UIViewController {
 //        loginButton.center = view.center
 //        view.addSubview(loginButton)
         
-        let facebookIcon = UIImage(named: "Icons/facebook_icon")
+//        let facebookIcon = UIImage(named: "Icons/facebook_icon")
         
         // Add a custom login button to your app
-        let myLoginButton = UIButton(type: .custom)
+        let myLoginButton = BounceButton(type: .custom)
+//        let myLoginButton = UIButton(type: .custom)
         myLoginButton.backgroundColor = UIColor(red: 57/255, green: 86/255, blue: 156/255, alpha: 1)
         myLoginButton.layer.cornerRadius = 4
         myLoginButton.frame = CGRect(x: 0, y: 0, width: 300, height: 40)
@@ -200,11 +201,13 @@ class SignInSignUpInitialVC: UIViewController {
             let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let newViewController = storyBoard.instantiateViewController(withIdentifier: "FeedViewController")
             
+            
+            self.present(newViewController, animated: true, completion: nil)
+
             //TODO: Renove loading view
             self.loadingView.alpha = 0
             SVProgressHUD.dismiss()
 
-            self.present(newViewController, animated: true, completion: nil)
         }
             //If user has no account with us, finish register
         else {
@@ -217,12 +220,13 @@ class SignInSignUpInitialVC: UIViewController {
             destinationVC.userInfo.firstName = self.firstNameFB
             destinationVC.userInfo.lastName = self.lastNameFB
             
+            self.present(newNavController, animated: true, completion: nil)
+
             
             //TODO: Renove loading view
             self.loadingView.alpha = 0
             SVProgressHUD.dismiss()
             
-            self.present(newNavController, animated: true, completion: nil)
         }
     }
     
