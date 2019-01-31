@@ -13,8 +13,6 @@ import SVProgressHUD
 
 class SignInSignUpInitialVC: UIViewController {
     
-
-    
     var emailFB = ""
     var firstNameFB = ""
     var lastNameFB = ""
@@ -98,6 +96,7 @@ class SignInSignUpInitialVC: UIViewController {
         }
     }
     
+    //get user facebook account basic info
     func getFacebookAccountInfo() {
         
         let graphRequest = GraphRequest(graphPath: "me", parameters:  [ "fields": "id, email, name, first_name, last_name, age_range, locale, timezone, gender,  picture.width(480).height(480)"], accessToken: AccessToken.current, httpMethod: GraphRequestHTTPMethod(rawValue: "GET")!)
@@ -121,9 +120,13 @@ class SignInSignUpInitialVC: UIViewController {
         })
     }
     
+    
     func makeCallToServer() {
         print("Check FB user")
-        let url = baseURL + endURLCheckFBUserExist
+        
+        
+//        let url = baseURL + endURLCheckFBUserExist
+        let url = "https://www.google.com"
         
         guard let fullURL = URL(string: url) else { print("Error: cannot create URL"); return }
         
@@ -146,6 +149,7 @@ class SignInSignUpInitialVC: UIViewController {
         
         let session = URLSession.shared
         
+        
         let task = session.dataTask(with: request, completionHandler: { (data, response, error) in
             
             if let response = response as? HTTPURLResponse {
@@ -154,18 +158,22 @@ class SignInSignUpInitialVC: UIViewController {
                 
                 print("Response Status Code: ", response.statusCode)
                 
-                if statusCode == 200 {
+                if statusCode != 200 {
                     
-                } else if statusCode == 500 {
                     print("Inernal Server Error")
-                    //TODO: Log out facebook
+                    //TODO: Log out facebook, Remain in the screen
                     DispatchQueue.main.async {
-                        self.loginManager.logOut()
-//                        self.loadingView.alpha = 0
-
+                        //TODO: uncomment next line
+//                        self.loginManager.logOut()
+                        self.dismissLoadingView()
+                        
+                        //TODO: Delete This Line
                         self.proceed(with: false)
                     }
                 }
+            } else {
+                self.loginManager.logOut()
+                self.dismissLoadingView()
             }
             
             if let error = error {
@@ -182,6 +190,7 @@ class SignInSignUpInitialVC: UIViewController {
                 DispatchQueue.main.async {
                     if Thread.isMainThread {
                         print("Thread is main")
+                        //MARK: Proceed to next VC
                         self.proceed(with: status)
                     }
                 }
@@ -192,21 +201,21 @@ class SignInSignUpInitialVC: UIViewController {
         task.resume()
     }
     
+    
     func proceed(with status: Bool) {
         //If user has account with us go to home page
         if status {
             print("User Exist")
             //TODO: download user data to local
+            
             let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let newViewController = storyBoard.instantiateViewController(withIdentifier: "FeedViewController")
             
             
             self.present(newViewController, animated: true, completion: nil)
 
-            //TODO: Renove loading view
-            self.loadingView.alpha = 0
-            SVProgressHUD.dismiss()
-
+            // Renove loading view
+            dismissLoadingView()
         }
             //If user has no account with us, finish register
         else {
@@ -221,12 +230,14 @@ class SignInSignUpInitialVC: UIViewController {
             
             self.present(newNavController, animated: true, completion: nil)
 
-            
-            //TODO: Renove loading view
-            self.loadingView.alpha = 0
-            SVProgressHUD.dismiss()
-            
+            dismissLoadingView()
         }
+    }
+    
+    //MARK: Remove loading view
+    func dismissLoadingView() {
+        self.loadingView.alpha = 0
+        SVProgressHUD.dismiss()
     }
     
 }

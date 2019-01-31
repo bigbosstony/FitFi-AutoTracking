@@ -9,7 +9,19 @@
 import UIKit
 
 class SetGoalsViewController: UIViewController {
+    
+    let muscleStirngArray: [String] = ["Tricep", "Bicep", "Forearm", "Chest", "Shoulders", "Back", "Abs", "Glutes", "Thigh", "Calf"]
 
+    var selectedMuscleGroupArray: [Muscle] = [] {
+        didSet {
+            let hasSelected = selectedMuscleGroupArray.contains { $0.select == true }
+            if hasSelected {
+                print("lol")
+            } else {
+                print("no lol")
+            }
+        }
+    }
     
     var userInfo = userAccountInfoFacebook() {
         didSet {
@@ -17,56 +29,75 @@ class SetGoalsViewController: UIViewController {
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print("From View will appear", userInfo)
+        
+        print(selectedMuscleGroupArray.isEmpty)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-    }
-
-    @IBAction func goToAppButtonPressed(_ sender: UIButton) {
-        print("registering")
-        let url = baseURL + endURLRegisterFBUser
         
-        guard let fullURL = URL(string: url) else { print("Error: cannot create URL"); return }
+        let width = self.view.frame.width - 40
+        let y = (self.view.frame.maxY - 60) / 2
         
-        var request = URLRequest(url: fullURL)
-        request.httpMethod = "POST"
+        let buildMuscleButton: BounceButton = BounceButton(type: .custom)
+        buildMuscleButton.backgroundColor = .red
+        buildMuscleButton.tintColor = .white
+        buildMuscleButton.frame = CGRect(x: 20, y: y, width: width, height: 60)
+        buildMuscleButton.setImage(UIImage(named: "Icons/build muscle"), for: .normal)
+        buildMuscleButton.imageEdgeInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: width - 95)
+        buildMuscleButton.titleEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        buildMuscleButton.setTitle("Build Muscle", for: .normal)
+        buildMuscleButton.layer.cornerRadius = 5
         
-        //                    let data: [String: Any] = ["facebook": true, "facebookID": userID]
-        let data: [String: Any] = ["thirdparty": "facebook", "email": userInfo.emailAddress ?? "", "facebook_id": userInfo.facebookID ?? "", "first_name": userInfo.firstName ?? "", "last_name": userInfo.lastName ?? "", "age": String(userInfo.age!), "gender": String(userInfo.gender!), "height": String(userInfo.height!), "weight": String(userInfo.weight!), "h_metric": userInfo.heightUnit , "w_metric": userInfo.weightUnit , "desired_weight": "10", "app_key": app_key]
+        buildMuscleButton.addTarget(self, action: #selector(showMuscleGroupView), for: .touchUpInside)
         
-        let jsonData: Data
+        self.view.addSubview(buildMuscleButton)
         
-        do {
-            jsonData = try JSONSerialization.data(withJSONObject: data, options: [])
-            request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-            request.httpBody = jsonData
-        } catch {
-            print("Error: cannot create JSON from")
-            return
+        // Construct muscle group array
+        for part in muscleStirngArray {
+            selectedMuscleGroupArray.append(Muscle(name: part, select: false))
         }
         
-        let session = URLSession.shared
+//        self.navigationItem.hidesBackButton = true
+    }
+    
+    @objc func showMuscleGroupView() {
+        performSegue(withIdentifier: "goToMuscleGroupVC", sender: self)
+    }
+    
+    func changeBuildMuscleButton(with color: UIColor, and image: UIImage) {
         
-        let task = session.dataTask(with: request, completionHandler: { (data, response, error) in
+    }
+    
+    @IBAction func nexButtonPressed(_ sender: Any) {
+        performSegue(withIdentifier: "goToSelectInterestVC", sender: self)
+    }
+    
+}
+
+extension SetGoalsViewController: MuscleGroupRecieved {
+    
+    func setMuscleGroup(from data: [Muscle]) {
+        selectedMuscleGroupArray = data
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToMuscleGroupVC" {
+            let destinationVC = segue.destination as! MuscleGroupViewController
+            destinationVC.selectedMuscleGroupArray = selectedMuscleGroupArray
             
-            guard let data = data else { print("no data return"); return }
+            destinationVC.delegate = self
             
-            do {
-                guard let receivedData = try JSONSerialization.jsonObject(with: data, options: []) as? [[String: Any]] else { print("nil return from server"); return }
-                
-                guard let status = receivedData[0]["status"] as? Bool else { print("nil return"); return }
-                
-                //If user has account with us go to home page
-                if status {
-                    print("Finish Registering")
-                    let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                    let newViewController = storyBoard.instantiateViewController(withIdentifier: "FeedViewController") as! FeedViewController
-                    self.present(newViewController, animated: true, completion: nil)
-                }
-            } catch {
-                return
-            }
-        })
-        task.resume()
+            destinationVC.backingImage = view.makeSnapshot()
+            
+        } else if segue.identifier == "goToSelectInterestVC" {
+            let destinationVC = segue.destination as! SelectInterestViewController
+            destinationVC.selectedMuscleGroupArray = selectedMuscleGroupArray
+            destinationVC.userInfo = userInfo
+        }
     }
 }

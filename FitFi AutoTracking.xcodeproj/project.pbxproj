@@ -10,6 +10,18 @@
 		413C33ACFA88AF299B8F2FEA /* Pods_FitFi_AutoTrackingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAADAC7760766F103F3C40E1 /* Pods_FitFi_AutoTrackingTests.framework */; };
 		9D864C101E1EB609095156D4 /* Pods_FitFi_AutoTracking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1CFDB0FAD66B915EB32058F /* Pods_FitFi_AutoTracking.framework */; };
 		D6688B0E7B45C69CE6F3BCA5 /* Pods_FitFi_AutoTrackingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B9E464F0B2ABF8F7C6372BF /* Pods_FitFi_AutoTrackingUITests.framework */; };
+		EA10A6302200F2C2007FC276 /* SelectInterestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA10A62F2200F2C2007FC276 /* SelectInterestViewController.swift */; };
+		EA10A6312200F2C2007FC276 /* SelectInterestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA10A62F2200F2C2007FC276 /* SelectInterestViewController.swift */; };
+		EA10A6322200F2C2007FC276 /* SelectInterestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA10A62F2200F2C2007FC276 /* SelectInterestViewController.swift */; };
+		EA10A634220100B2007FC276 /* MuscleGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA10A633220100B2007FC276 /* MuscleGroupViewController.swift */; };
+		EA10A635220100B2007FC276 /* MuscleGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA10A633220100B2007FC276 /* MuscleGroupViewController.swift */; };
+		EA10A636220100B2007FC276 /* MuscleGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA10A633220100B2007FC276 /* MuscleGroupViewController.swift */; };
+		EA10A63822011434007FC276 /* MuscleGroupCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA10A63722011434007FC276 /* MuscleGroupCollectionViewCell.swift */; };
+		EA10A63922011434007FC276 /* MuscleGroupCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA10A63722011434007FC276 /* MuscleGroupCollectionViewCell.swift */; };
+		EA10A63A22011434007FC276 /* MuscleGroupCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA10A63722011434007FC276 /* MuscleGroupCollectionViewCell.swift */; };
+		EA10A63C22021A7A007FC276 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA10A63B22021A7A007FC276 /* TabBarViewController.swift */; };
+		EA10A63D22021A7A007FC276 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA10A63B22021A7A007FC276 /* TabBarViewController.swift */; };
+		EA10A63E22021A7A007FC276 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA10A63B22021A7A007FC276 /* TabBarViewController.swift */; };
 		EA13246B21F0578F00B202D5 /* SelectAgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA13246A21F0578F00B202D5 /* SelectAgeViewController.swift */; };
 		EA13246C21F0578F00B202D5 /* SelectAgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA13246A21F0578F00B202D5 /* SelectAgeViewController.swift */; };
 		EA13246D21F0578F00B202D5 /* SelectAgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA13246A21F0578F00B202D5 /* SelectAgeViewController.swift */; };
@@ -32,6 +44,9 @@
 		EA4121A521E6A313009CD6B0 /* CollectionViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4121A421E6A313009CD6B0 /* CollectionViewCell2.swift */; };
 		EA4121A621E6A313009CD6B0 /* CollectionViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4121A421E6A313009CD6B0 /* CollectionViewCell2.swift */; };
 		EA4121A721E6A313009CD6B0 /* CollectionViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4121A421E6A313009CD6B0 /* CollectionViewCell2.swift */; };
+		EAB5225A2202521300864502 /* UIView+Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB522592202521300864502 /* UIView+Snapshot.swift */; };
+		EAB5225B2202521300864502 /* UIView+Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB522592202521300864502 /* UIView+Snapshot.swift */; };
+		EAB5225C2202521300864502 /* UIView+Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB522592202521300864502 /* UIView+Snapshot.swift */; };
 		EAD6754421ED1CE0007312D0 /* SignInSignUpInitialVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD6754321ED1CE0007312D0 /* SignInSignUpInitialVC.swift */; };
 		EAD6754521ED1CE0007312D0 /* SignInSignUpInitialVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD6754321ED1CE0007312D0 /* SignInSignUpInitialVC.swift */; };
 		EAD6754621ED1CE0007312D0 /* SignInSignUpInitialVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD6754321ED1CE0007312D0 /* SignInSignUpInitialVC.swift */; };
@@ -95,6 +110,10 @@
 		B13DDF5C6B3DEDE4B9DA5792 /* Pods-FitFi AutoTrackingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitFi AutoTrackingTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FitFi AutoTrackingTests/Pods-FitFi AutoTrackingTests.release.xcconfig"; sourceTree = "<group>"; };
 		B291D93F89AA4BEC8B4FCDE5 /* Pods-FitFi AutoTrackingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitFi AutoTrackingTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FitFi AutoTrackingTests/Pods-FitFi AutoTrackingTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E1CFDB0FAD66B915EB32058F /* Pods_FitFi_AutoTracking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FitFi_AutoTracking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA10A62F2200F2C2007FC276 /* SelectInterestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectInterestViewController.swift; sourceTree = "<group>"; };
+		EA10A633220100B2007FC276 /* MuscleGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuscleGroupViewController.swift; sourceTree = "<group>"; };
+		EA10A63722011434007FC276 /* MuscleGroupCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuscleGroupCollectionViewCell.swift; sourceTree = "<group>"; };
+		EA10A63B22021A7A007FC276 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		EA13246A21F0578F00B202D5 /* SelectAgeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAgeViewController.swift; sourceTree = "<group>"; };
 		EA13246E21F0604400B202D5 /* FinishProfileSetupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishProfileSetupVC.swift; sourceTree = "<group>"; };
 		EA13247221F06C9800B202D5 /* ProfileSetupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSetupTableViewCell.swift; sourceTree = "<group>"; };
@@ -113,6 +132,7 @@
 		EA41219021E408CB009CD6B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA4121A021E69F34009CD6B0 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		EA4121A421E6A313009CD6B0 /* CollectionViewCell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell2.swift; sourceTree = "<group>"; };
+		EAB522592202521300864502 /* UIView+Snapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Snapshot.swift"; sourceTree = "<group>"; };
 		EAD6754321ED1CE0007312D0 /* SignInSignUpInitialVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInSignUpInitialVC.swift; sourceTree = "<group>"; };
 		EAD6754721ED1E0F007312D0 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		EAD6754B21ED27CB007312D0 /* SetUpWeightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetUpWeightViewController.swift; sourceTree = "<group>"; };
@@ -207,10 +227,12 @@
 			children = (
 				EA41216B21E408C9009CD6B0 /* AppDelegate.swift */,
 				EA41216F21E408C9009CD6B0 /* Main.storyboard */,
+				EA10A63B22021A7A007FC276 /* TabBarViewController.swift */,
 				EAD6754721ED1E0F007312D0 /* FeedViewController.swift */,
 				EAF4A67821FA4F360095E18A /* CustomControls */,
 				EAFEB37521F26F52005D8C9F /* Extension */,
-				EAD6755821EE6BAB007312D0 /* Helpers */,
+				EAD6755821EE6BAB007312D0 /* Models */,
+				EAB5225D2202522400864502 /* Helpers */,
 				EAD6755321EE448A007312D0 /* SignInSignUp */,
 				EA41217521E408CB009CD6B0 /* Assets.xcassets */,
 				EA41217721E408CB009CD6B0 /* LaunchScreen.storyboard */,
@@ -238,6 +260,14 @@
 			path = "FitFi AutoTrackingUITests";
 			sourceTree = "<group>";
 		};
+		EAB5225D2202522400864502 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				EAB522592202521300864502 /* UIView+Snapshot.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		EAD6755321EE448A007312D0 /* SignInSignUp */ = {
 			isa = PBXGroup;
 			children = (
@@ -247,17 +277,20 @@
 				EA13246E21F0604400B202D5 /* FinishProfileSetupVC.swift */,
 				EA13247221F06C9800B202D5 /* ProfileSetupTableViewCell.swift */,
 				EAFEB36D21F10CEF005D8C9F /* SetGoalsViewController.swift */,
+				EA10A633220100B2007FC276 /* MuscleGroupViewController.swift */,
+				EA10A63722011434007FC276 /* MuscleGroupCollectionViewCell.swift */,
+				EA10A62F2200F2C2007FC276 /* SelectInterestViewController.swift */,
 				EAD6757521EF8E0C007312D0 /* Weight Scale Part */,
 			);
 			path = SignInSignUp;
 			sourceTree = "<group>";
 		};
-		EAD6755821EE6BAB007312D0 /* Helpers */ = {
+		EAD6755821EE6BAB007312D0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				EAD6755921EE6BC0007312D0 /* AccountInfo.swift */,
 			);
-			path = Helpers;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		EAD6757521EF8E0C007312D0 /* Weight Scale Part */ = {
@@ -520,19 +553,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA10A6302200F2C2007FC276 /* SelectInterestViewController.swift in Sources */,
 				EAD6756F21EF8CEE007312D0 /* SetUpProfileCollectionViewCell.swift in Sources */,
 				EA13246F21F0604400B202D5 /* FinishProfileSetupVC.swift in Sources */,
 				EAD6754421ED1CE0007312D0 /* SignInSignUpInitialVC.swift in Sources */,
+				EA10A63C22021A7A007FC276 /* TabBarViewController.swift in Sources */,
 				EA41216C21E408C9009CD6B0 /* AppDelegate.swift in Sources */,
 				EAFEB36E21F10CEF005D8C9F /* SetGoalsViewController.swift in Sources */,
 				EA4121A521E6A313009CD6B0 /* CollectionViewCell2.swift in Sources */,
 				EA4121A121E69F34009CD6B0 /* CollectionViewCell.swift in Sources */,
+				EAB5225A2202521300864502 /* UIView+Snapshot.swift in Sources */,
 				EAD6755521EE47ED007312D0 /* SocialDetailsViewController.swift in Sources */,
+				EA10A634220100B2007FC276 /* MuscleGroupViewController.swift in Sources */,
 				EAF4A67521FA4F300095E18A /* BounceButton.swift in Sources */,
 				EA13247321F06C9800B202D5 /* ProfileSetupTableViewCell.swift in Sources */,
 				EAD6754821ED1E0F007312D0 /* FeedViewController.swift in Sources */,
 				EAFEB36A21F0E4C3005D8C9F /* PickerViewLauncher.swift in Sources */,
 				EA41217421E408C9009CD6B0 /* FitFi_AutoTracking.xcdatamodeld in Sources */,
+				EA10A63822011434007FC276 /* MuscleGroupCollectionViewCell.swift in Sources */,
 				EA13246B21F0578F00B202D5 /* SelectAgeViewController.swift in Sources */,
 				EAFEB37221F26F47005D8C9F /* ButtonExtensions.swift in Sources */,
 				EAD6755A21EE6BC0007312D0 /* AccountInfo.swift in Sources */,
@@ -552,10 +590,15 @@
 				EAF4A67621FA4F300095E18A /* BounceButton.swift in Sources */,
 				EAD6754921ED1E0F007312D0 /* FeedViewController.swift in Sources */,
 				EAD6757021EF8CEE007312D0 /* SetUpProfileCollectionViewCell.swift in Sources */,
+				EA10A63D22021A7A007FC276 /* TabBarViewController.swift in Sources */,
 				EAD6754521ED1CE0007312D0 /* SignInSignUpInitialVC.swift in Sources */,
 				EA13247421F06C9800B202D5 /* ProfileSetupTableViewCell.swift in Sources */,
 				EAFEB37321F26F47005D8C9F /* ButtonExtensions.swift in Sources */,
+				EA10A6312200F2C2007FC276 /* SelectInterestViewController.swift in Sources */,
+				EA10A63922011434007FC276 /* MuscleGroupCollectionViewCell.swift in Sources */,
 				EAD6754D21ED27CB007312D0 /* SetUpWeightViewController.swift in Sources */,
+				EA10A635220100B2007FC276 /* MuscleGroupViewController.swift in Sources */,
+				EAB5225B2202521300864502 /* UIView+Snapshot.swift in Sources */,
 				EAD6755B21EE6BC0007312D0 /* AccountInfo.swift in Sources */,
 				EAFEB36B21F0E4C3005D8C9F /* PickerViewLauncher.swift in Sources */,
 				EA41218421E408CB009CD6B0 /* FitFi_AutoTrackingTests.swift in Sources */,
@@ -575,10 +618,15 @@
 				EAF4A67721FA4F300095E18A /* BounceButton.swift in Sources */,
 				EAD6754A21ED1E0F007312D0 /* FeedViewController.swift in Sources */,
 				EAD6757121EF8CEE007312D0 /* SetUpProfileCollectionViewCell.swift in Sources */,
+				EA10A63E22021A7A007FC276 /* TabBarViewController.swift in Sources */,
 				EAD6754621ED1CE0007312D0 /* SignInSignUpInitialVC.swift in Sources */,
 				EA13247521F06C9800B202D5 /* ProfileSetupTableViewCell.swift in Sources */,
 				EAFEB37421F26F47005D8C9F /* ButtonExtensions.swift in Sources */,
+				EA10A6322200F2C2007FC276 /* SelectInterestViewController.swift in Sources */,
+				EA10A63A22011434007FC276 /* MuscleGroupCollectionViewCell.swift in Sources */,
 				EAD6754E21ED27CC007312D0 /* SetUpWeightViewController.swift in Sources */,
+				EA10A636220100B2007FC276 /* MuscleGroupViewController.swift in Sources */,
+				EAB5225C2202521300864502 /* UIView+Snapshot.swift in Sources */,
 				EAD6755C21EE6BC0007312D0 /* AccountInfo.swift in Sources */,
 				EAFEB36C21F0E4C3005D8C9F /* PickerViewLauncher.swift in Sources */,
 				EA41218F21E408CB009CD6B0 /* FitFi_AutoTrackingUITests.swift in Sources */,

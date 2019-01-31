@@ -35,6 +35,7 @@ class FinishProfileSetupVC: UIViewController {
         }
     }
     
+    
     let ageStringArray: [String] = {
         let ageArray = Array(0...120)
         return ageArray.map{ String($0) }
@@ -127,10 +128,6 @@ class FinishProfileSetupVC: UIViewController {
             blackView.backgroundColor = UIColor(white: 0, alpha: 0.5)
             blackView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleDismiss)))
             
-            window.addSubview(blackView)
-            window.addSubview(pickerView)
-            window.addSubview(toolBar)
-            
             let height: CGFloat = window.frame.height / 3 - 44
             let x: CGFloat = 0
             let y = window.frame.height - height
@@ -153,6 +150,10 @@ class FinishProfileSetupVC: UIViewController {
             
             toolBar.barTintColor = .black
             toolBar.tintColor = .white
+            
+            window.addSubview(blackView)
+            window.addSubview(pickerView)
+            window.addSubview(toolBar)
             
             UIView.animate(withDuration: 0.5, delay: 0.2, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
                 self.blackView.alpha = 1
