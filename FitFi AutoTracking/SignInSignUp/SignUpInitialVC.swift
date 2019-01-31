@@ -11,7 +11,7 @@ import FacebookLogin
 import FacebookCore
 import SVProgressHUD
 
-class SignInSignUpInitialVC: UIViewController {
+class SignUpInitialVC: UIViewController {
     
     var emailFB = ""
     var firstNameFB = ""
@@ -24,14 +24,6 @@ class SignInSignUpInitialVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        //Default Facebook Login Button
-//        let loginButton = LoginButton(readPermissions: [ .publicProfile, .email ])
-//        loginButton.center = view.center
-//        view.addSubview(loginButton)
-        
-//        let facebookIcon = UIImage(named: "Icons/facebook_icon")
         
         // Add a custom login button to your app
         let myLoginButton = BounceButton(type: .custom)
@@ -71,16 +63,6 @@ class SignInSignUpInitialVC: UIViewController {
                 self.loadingView.alpha = 1
                 self.view.addSubview(self.loadingView)
                 SVProgressHUD.show()
-
-//                if let window = UIApplication.shared.keyWindow {
-////                    self.loadingView.backgroundColor = UIColor(white: 0, alpha: 0.5)
-//
-//                    //TODO: Add Loading View
-//                    window.addSubview(self.loadingView)
-//                    SVProgressHUD.show()
-//
-//                    self.loadingView.frame = window.frame
-//                }
                 
                 // GraphRequest for Facebook
 //                let graphRequest : GraphRequest = GraphRequest(graphPath: "me", parameters: [ "fields": "id, email, name, first_name, last_name, age_range, locale, timezone, gender,  picture.width(480).height(480)"] )
@@ -220,17 +202,11 @@ class SignInSignUpInitialVC: UIViewController {
             //If user has no account with us, finish register
         else {
             print("User Not Exist")
-            let storyBoard: UIStoryboard = UIStoryboard(name: "SignInSignUp", bundle: nil)
-            let newNavController: UINavigationController = storyBoard.instantiateViewController(withIdentifier: "finishSignUpDetailWithSocialAccountNC") as UIViewController as! UINavigationController
-            let destinationVC = newNavController.viewControllers.first as! SelectAgeViewController
-            destinationVC.userInfo.emailAddress = self.emailFB
-            destinationVC.userInfo.facebookID = self.idFB
-            destinationVC.userInfo.firstName = self.firstNameFB
-            destinationVC.userInfo.lastName = self.lastNameFB
             
-            self.present(newNavController, animated: true, completion: nil)
-
             dismissLoadingView()
+
+            performSegue(withIdentifier: "goToAgeSelectionVC", sender: self)
+
         }
     }
     
@@ -238,6 +214,18 @@ class SignInSignUpInitialVC: UIViewController {
     func dismissLoadingView() {
         self.loadingView.alpha = 0
         SVProgressHUD.dismiss()
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToAgeSelectionVC" {
+            let ageViewController = segue.destination as! SelectAgeViewController
+            
+            ageViewController.userInfo.emailAddress = self.emailFB
+            ageViewController.userInfo.facebookID = self.idFB
+            ageViewController.userInfo.firstName = self.firstNameFB
+            ageViewController.userInfo.lastName = self.lastNameFB
+        }
     }
     
 }

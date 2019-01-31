@@ -33,10 +33,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return SDKApplicationDelegate.shared.application(app, open: url, options: options)
     }
     
+    // Set SignUp Page for Initial home page if user has not logged in
     func goToSignInMainPage() {
-        let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "SignInSignUp", bundle: nil)
-        let signInSignUpRootNC : UIViewController = mainStoryboardIpad.instantiateViewController(withIdentifier: "signInSignIpViewController")
-        
+        let storyboard : UIStoryboard = UIStoryboard(name: "SignInSignUp", bundle: nil)
+        let signInSignUpRootNC : UINavigationController = storyboard.instantiateViewController(withIdentifier: "signInAndUpHomeNC") as UIViewController as! UINavigationController
+
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.rootViewController = signInSignUpRootNC
         self.window?.makeKeyAndVisible()

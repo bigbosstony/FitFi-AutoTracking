@@ -34,8 +34,9 @@ class FeedViewController: UIViewController {
         if AccessToken.current != nil {
             loginManager.logOut()
             // go to sign in vc
-            let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "SignInSignUp", bundle: nil)
-            let signInSignUpRootNC : UIViewController = mainStoryboardIpad.instantiateViewController(withIdentifier: "signInSignIpViewController")
+            let storyboard : UIStoryboard = UIStoryboard(name: "SignInSignUp", bundle: nil)
+            let signInSignUpRootNC : UINavigationController = storyboard.instantiateViewController(withIdentifier: "signInAndUpHomeNC") as UIViewController as! UINavigationController
+            
             self.present(signInSignUpRootNC, animated: true, completion: nil)
         }
     }

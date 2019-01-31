@@ -59,11 +59,28 @@ class MuscleGroupViewController: UIViewController {
             print(width)
         }
         
-        backingImageView.image = backingImage
-        dimmerLayer.alpha = 0.5
         
-        
+
+        //Get the safe area frame
+//        let guide = view.safeAreaLayoutGuide
+//        let height = guide.layoutFrame.size.height
+//        print("Height: ", height)
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        print("did")
+        backingImageView.image = backingImage
+
+        animateBackgroundView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print("will")
+    }
+    
     
     
     @IBAction func finishButtonPressed(_ sender: UIButton) {
@@ -71,6 +88,7 @@ class MuscleGroupViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
 }
+
 
 extension MuscleGroupViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
@@ -102,25 +120,42 @@ extension MuscleGroupViewController: UICollectionViewDelegate, UICollectionViewD
     }
 }
 
+
+
 extension MuscleGroupViewController: UIScrollViewDelegate {
+    //Set offsetY for scroll view on bottom to prevent showing the background
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let offsetYToStop: CGFloat!
         let screenHeight = self.view.frame.height
+        
+        //iphone xs and xs max, bottom padding
+        let window = UIApplication.shared.keyWindow
+        let bottomPadding = window?.safeAreaInsets.bottom
+        
+        let actualScreenHeight = screenHeight - (bottomPadding ?? 0.0)
+        
         let contentHeight = CGFloat(180 + 580 + 128)
         
-        if contentHeight > screenHeight {
-            offsetYToStop = contentHeight - screenHeight
+        
+        if contentHeight > actualScreenHeight {
+            offsetYToStop = contentHeight - actualScreenHeight
         } else {
-            offsetYToStop = screenHeight - contentHeight
+            offsetYToStop = actualScreenHeight - contentHeight
         }
         
         let offsetY = scrollView.contentOffset.y
         
-        print(offsetY, offsetYToStop)
         if offsetY > offsetYToStop {
             scrollView.setContentOffset(CGPoint(x: 0, y: offsetYToStop), animated: false)
         }
     }
+}
 
-    
+extension MuscleGroupViewController {
+    func animateBackgroundView() {
+        UIView.animate(withDuration: 0.7) {
+            self.dimmerLayer.alpha = 0.3
+
+        }
+    }
 }

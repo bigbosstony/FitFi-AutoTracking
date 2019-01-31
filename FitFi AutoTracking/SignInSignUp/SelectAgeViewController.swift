@@ -41,28 +41,29 @@ class SelectAgeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        print("viewDidLoad")
         //Hide Tab bar border
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
-        
+
         let femaleImage = UIImage(named: "Icons/genderFemale")
         let maleImage = UIImage(named: "Icons/genderMale")
-        
+
         let sideLength = self.view.frame.width / 2 - 30
-        
-        
+
+
         femaleButton = UIButton(frame: CGRect(x: 20, y: 215, width: sideLength, height: sideLength))
         femaleButton.imageView?.contentMode = UIView.ContentMode.scaleAspectFit
         femaleButton.setImage(femaleImage, for: UIControl.State.normal)
         femaleButton.addTarget(self, action: #selector(femaleButtonPressed), for: UIControl.Event.touchUpInside)
         femaleButton.alpha = 0.25
-        
+
         maleButton = UIButton(frame: CGRect(x: (20 + sideLength + 10), y: 215, width: sideLength, height: sideLength))
         maleButton.imageView?.contentMode = UIView.ContentMode.scaleAspectFit
         maleButton.setImage(maleImage, for: UIControl.State.normal)
         maleButton.addTarget(self, action: #selector(maleButtonPressed), for: UIControl.Event.touchUpInside)
         maleButton.alpha = 0.25
-        
+
         view.addSubview(femaleButton)
         view.addSubview(maleButton)
     }
@@ -73,29 +74,14 @@ class SelectAgeViewController: UIViewController {
         gender[0] = false
         gender[1] = true
     }
-    
+
     @objc func maleButtonPressed() {
         maleButton.pulsate()
         userInfo.gender = 0
         gender[0] = true
         gender[1] = false
     }
-    
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    @IBAction func cancelButtonTapped(_ sender: UIBarButtonItem) {
-        let loginManager = LoginManager()
-        loginManager.logOut()
-        self.dismiss(animated: true, completion: nil)
-    }
-    
     @IBAction func nextButtonPressed(_ sender: UIButton) {
         for value in gender {
             if value {
@@ -105,7 +91,7 @@ class SelectAgeViewController: UIViewController {
             }
         }
     }
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToFinishProfileSetupVC" {
             let destinationVC = segue.destination as! FinishProfileSetupVC

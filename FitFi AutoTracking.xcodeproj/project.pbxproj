@@ -47,9 +47,12 @@
 		EAB5225A2202521300864502 /* UIView+Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB522592202521300864502 /* UIView+Snapshot.swift */; };
 		EAB5225B2202521300864502 /* UIView+Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB522592202521300864502 /* UIView+Snapshot.swift */; };
 		EAB5225C2202521300864502 /* UIView+Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB522592202521300864502 /* UIView+Snapshot.swift */; };
-		EAD6754421ED1CE0007312D0 /* SignInSignUpInitialVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD6754321ED1CE0007312D0 /* SignInSignUpInitialVC.swift */; };
-		EAD6754521ED1CE0007312D0 /* SignInSignUpInitialVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD6754321ED1CE0007312D0 /* SignInSignUpInitialVC.swift */; };
-		EAD6754621ED1CE0007312D0 /* SignInSignUpInitialVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD6754321ED1CE0007312D0 /* SignInSignUpInitialVC.swift */; };
+		EAB5225F2203726200864502 /* SignInAndUpHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB5225E2203726200864502 /* SignInAndUpHomeViewController.swift */; };
+		EAB522602203726200864502 /* SignInAndUpHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB5225E2203726200864502 /* SignInAndUpHomeViewController.swift */; };
+		EAB522612203726200864502 /* SignInAndUpHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB5225E2203726200864502 /* SignInAndUpHomeViewController.swift */; };
+		EAD6754421ED1CE0007312D0 /* SignUpInitialVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD6754321ED1CE0007312D0 /* SignUpInitialVC.swift */; };
+		EAD6754521ED1CE0007312D0 /* SignUpInitialVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD6754321ED1CE0007312D0 /* SignUpInitialVC.swift */; };
+		EAD6754621ED1CE0007312D0 /* SignUpInitialVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD6754321ED1CE0007312D0 /* SignUpInitialVC.swift */; };
 		EAD6754821ED1E0F007312D0 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD6754721ED1E0F007312D0 /* FeedViewController.swift */; };
 		EAD6754921ED1E0F007312D0 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD6754721ED1E0F007312D0 /* FeedViewController.swift */; };
 		EAD6754A21ED1E0F007312D0 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD6754721ED1E0F007312D0 /* FeedViewController.swift */; };
@@ -133,7 +136,8 @@
 		EA4121A021E69F34009CD6B0 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		EA4121A421E6A313009CD6B0 /* CollectionViewCell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell2.swift; sourceTree = "<group>"; };
 		EAB522592202521300864502 /* UIView+Snapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Snapshot.swift"; sourceTree = "<group>"; };
-		EAD6754321ED1CE0007312D0 /* SignInSignUpInitialVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInSignUpInitialVC.swift; sourceTree = "<group>"; };
+		EAB5225E2203726200864502 /* SignInAndUpHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInAndUpHomeViewController.swift; sourceTree = "<group>"; };
+		EAD6754321ED1CE0007312D0 /* SignUpInitialVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpInitialVC.swift; sourceTree = "<group>"; };
 		EAD6754721ED1E0F007312D0 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		EAD6754B21ED27CB007312D0 /* SetUpWeightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetUpWeightViewController.swift; sourceTree = "<group>"; };
 		EAD6754F21EE4456007312D0 /* SignInSignUp.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SignInSignUp.storyboard; sourceTree = "<group>"; };
@@ -272,7 +276,8 @@
 			isa = PBXGroup;
 			children = (
 				EAD6754F21EE4456007312D0 /* SignInSignUp.storyboard */,
-				EAD6754321ED1CE0007312D0 /* SignInSignUpInitialVC.swift */,
+				EAB5225E2203726200864502 /* SignInAndUpHomeViewController.swift */,
+				EAD6754321ED1CE0007312D0 /* SignUpInitialVC.swift */,
 				EA13246A21F0578F00B202D5 /* SelectAgeViewController.swift */,
 				EA13246E21F0604400B202D5 /* FinishProfileSetupVC.swift */,
 				EA13247221F06C9800B202D5 /* ProfileSetupTableViewCell.swift */,
@@ -556,13 +561,14 @@
 				EA10A6302200F2C2007FC276 /* SelectInterestViewController.swift in Sources */,
 				EAD6756F21EF8CEE007312D0 /* SetUpProfileCollectionViewCell.swift in Sources */,
 				EA13246F21F0604400B202D5 /* FinishProfileSetupVC.swift in Sources */,
-				EAD6754421ED1CE0007312D0 /* SignInSignUpInitialVC.swift in Sources */,
+				EAD6754421ED1CE0007312D0 /* SignUpInitialVC.swift in Sources */,
 				EA10A63C22021A7A007FC276 /* TabBarViewController.swift in Sources */,
 				EA41216C21E408C9009CD6B0 /* AppDelegate.swift in Sources */,
 				EAFEB36E21F10CEF005D8C9F /* SetGoalsViewController.swift in Sources */,
 				EA4121A521E6A313009CD6B0 /* CollectionViewCell2.swift in Sources */,
 				EA4121A121E69F34009CD6B0 /* CollectionViewCell.swift in Sources */,
 				EAB5225A2202521300864502 /* UIView+Snapshot.swift in Sources */,
+				EAB5225F2203726200864502 /* SignInAndUpHomeViewController.swift in Sources */,
 				EAD6755521EE47ED007312D0 /* SocialDetailsViewController.swift in Sources */,
 				EA10A634220100B2007FC276 /* MuscleGroupViewController.swift in Sources */,
 				EAF4A67521FA4F300095E18A /* BounceButton.swift in Sources */,
@@ -591,11 +597,12 @@
 				EAD6754921ED1E0F007312D0 /* FeedViewController.swift in Sources */,
 				EAD6757021EF8CEE007312D0 /* SetUpProfileCollectionViewCell.swift in Sources */,
 				EA10A63D22021A7A007FC276 /* TabBarViewController.swift in Sources */,
-				EAD6754521ED1CE0007312D0 /* SignInSignUpInitialVC.swift in Sources */,
+				EAD6754521ED1CE0007312D0 /* SignUpInitialVC.swift in Sources */,
 				EA13247421F06C9800B202D5 /* ProfileSetupTableViewCell.swift in Sources */,
 				EAFEB37321F26F47005D8C9F /* ButtonExtensions.swift in Sources */,
 				EA10A6312200F2C2007FC276 /* SelectInterestViewController.swift in Sources */,
 				EA10A63922011434007FC276 /* MuscleGroupCollectionViewCell.swift in Sources */,
+				EAB522602203726200864502 /* SignInAndUpHomeViewController.swift in Sources */,
 				EAD6754D21ED27CB007312D0 /* SetUpWeightViewController.swift in Sources */,
 				EA10A635220100B2007FC276 /* MuscleGroupViewController.swift in Sources */,
 				EAB5225B2202521300864502 /* UIView+Snapshot.swift in Sources */,
@@ -619,11 +626,12 @@
 				EAD6754A21ED1E0F007312D0 /* FeedViewController.swift in Sources */,
 				EAD6757121EF8CEE007312D0 /* SetUpProfileCollectionViewCell.swift in Sources */,
 				EA10A63E22021A7A007FC276 /* TabBarViewController.swift in Sources */,
-				EAD6754621ED1CE0007312D0 /* SignInSignUpInitialVC.swift in Sources */,
+				EAD6754621ED1CE0007312D0 /* SignUpInitialVC.swift in Sources */,
 				EA13247521F06C9800B202D5 /* ProfileSetupTableViewCell.swift in Sources */,
 				EAFEB37421F26F47005D8C9F /* ButtonExtensions.swift in Sources */,
 				EA10A6322200F2C2007FC276 /* SelectInterestViewController.swift in Sources */,
 				EA10A63A22011434007FC276 /* MuscleGroupCollectionViewCell.swift in Sources */,
+				EAB522612203726200864502 /* SignInAndUpHomeViewController.swift in Sources */,
 				EAD6754E21ED27CC007312D0 /* SetUpWeightViewController.swift in Sources */,
 				EA10A636220100B2007FC276 /* MuscleGroupViewController.swift in Sources */,
 				EAB5225C2202521300864502 /* UIView+Snapshot.swift in Sources */,
