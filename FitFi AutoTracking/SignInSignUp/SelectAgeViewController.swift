@@ -51,6 +51,14 @@ class SelectAgeViewController: UIViewController {
 
         let sideLength = self.view.frame.width / 2 - 30
 
+        //Button Shadow
+        nextButton.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
+        nextButton.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
+        nextButton.layer.shadowOpacity = 1.0
+        nextButton.layer.shadowRadius = 0.0
+        nextButton.layer.masksToBounds = false
+        nextButton.layer.cornerRadius = 5.0
+        
 
         femaleButton = UIButton(frame: CGRect(x: 20, y: 215, width: sideLength, height: sideLength))
         femaleButton.imageView?.contentMode = UIView.ContentMode.scaleAspectFit
@@ -64,6 +72,7 @@ class SelectAgeViewController: UIViewController {
         maleButton.addTarget(self, action: #selector(maleButtonPressed), for: UIControl.Event.touchUpInside)
         maleButton.alpha = 0.25
 
+        
         view.addSubview(femaleButton)
         view.addSubview(maleButton)
     }

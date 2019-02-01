@@ -10,6 +10,8 @@ import Foundation
 import UIKit
 
 extension UIButton {
+    
+    ///
     func pulsate() {
         let pulse = CASpringAnimation(keyPath: "transform.scale")
         pulse.duration = 0.2
@@ -23,6 +25,7 @@ extension UIButton {
         layer.add(pulse, forKey: nil)
     }
     
+    /// Shake your button for a second
     func shake() {
         let shake = CABasicAnimation(keyPath: "position")
         shake.duration = 0.1
@@ -52,4 +55,9 @@ extension UIButton {
         
         layer.add(flash, forKey: nil)
     }
+}
+
+
+extension UIButton {
+    
 }
