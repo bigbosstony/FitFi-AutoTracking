@@ -18,30 +18,64 @@ class SignUpInitialVC: UIViewController {
     var lastNameFB = ""
     var idFB = ""
     
+    var firstName: String?
+    var lastName: String?
+    var email: String?
+    var password: String?
+    
 
     let loginManager = LoginManager()
     let loadingView = UIVisualEffectView()
 
+    let receivedData: [String: Any] = [:]
+    
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var contentView: UIView!
+    
+    @IBOutlet weak var firstNameTextField: UITextField!
+    @IBOutlet weak var lastNameTextField: UITextField!
+    
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+//        scrollView.touchesShouldCancel(in: view)
+        
+        scrollView.delegate = self
+//        scrollView.keyboardDismissMode = .onDrag
+        
+        firstNameTextField.delegate = self
+        lastNameTextField.delegate = self
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
+        
+        firstNameTextField.tag = 0
+        lastNameTextField.tag = 1
+        emailTextField.tag = 2
+        passwordTextField.tag = 3
+        
+        let width = self.view.frame.width
         
         // Add a custom login button to your app
         let myLoginButton = BounceButton(type: .custom)
         myLoginButton.backgroundColor = UIColor(red: 57/255, green: 86/255, blue: 156/255, alpha: 1)
         myLoginButton.layer.cornerRadius = 4
-        myLoginButton.frame = CGRect(x: 0, y: 0, width: 300, height: 40)
-        myLoginButton.center = view.center
+        myLoginButton.frame = CGRect(x: 40, y: 30, width: width - 80, height: 40)
+//        myLoginButton.center = view.center
         myLoginButton.setTitle("Continue With Facebook", for: .normal)
 
         // Handle clicks on the button
         myLoginButton.addTarget(self, action: #selector(self.loginButtonClicked), for: .touchUpInside)
         // Add the button to the view
-        view.addSubview(myLoginButton)
+        contentView.addSubview(myLoginButton)
         
         let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.light)
         loadingView.effect = blurEffect
         loadingView.frame = self.view.bounds
 //        self.navigationController?.view.addSubview()
+        
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
     
     // Once the button is clicked, show the login dialog
@@ -73,7 +107,6 @@ class SignUpInitialVC: UIViewController {
 //                }
                 
                 self.getFacebookAccountInfo()
- 
             }
         }
     }
@@ -94,8 +127,9 @@ class SignUpInitialVC: UIViewController {
                     self.emailFB = responseDictionary["email"] as? String ?? ""
                     self.idFB = responseDictionary["id"] as? String ?? ""
                     
-                    self.makeCallToServer()
-                    
+                    self.makeCallToServer(completion: { (receivedData) in
+                        print("Received data: ", receivedData)
+                    })
                 }
             case .failed(_): break
             }
@@ -103,7 +137,8 @@ class SignUpInitialVC: UIViewController {
     }
     
     
-    func makeCallToServer() {
+    //TODO: Change to Generic Function
+    func makeCallToServer(completion: @escaping ([String: Any]) -> ()) {
         print("Check FB user")
         
         
@@ -130,7 +165,6 @@ class SignUpInitialVC: UIViewController {
         }
         
         let session = URLSession.shared
-        
         
         let task = session.dataTask(with: request, completionHandler: { (data, response, error) in
             
@@ -166,17 +200,19 @@ class SignUpInitialVC: UIViewController {
             
             do {
                 guard let receivedData = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] else { print("nil return from server"); return }
+                completion(receivedData)
                 
-                guard let status = receivedData["status"] as? Bool else { print("nil return"); return }
-                
-                DispatchQueue.main.async {
-                    if Thread.isMainThread {
-                        print("Thread is main")
-                        //MARK: Proceed to next VC
-                        self.proceed(with: status)
-                    }
-                }
-            } catch {
+//                guard let status = receivedData["status"] as? Bool else { print("nil return"); return }
+//
+//                DispatchQueue.main.async {
+//                    if Thread.isMainThread {
+//                        print("Thread is main")
+//                        //MARK: Proceed to next VC
+//                        self.proceed(with: status)
+//                    }
+//                }
+            } catch let jsonError {
+                print("Failed to decode json: ", jsonError)
                 return
             }
         })
@@ -202,13 +238,11 @@ class SignUpInitialVC: UIViewController {
             //If user has no account with us, finish register
         else {
             print("User Not Exist")
-            
             dismissLoadingView()
-
             performSegue(withIdentifier: "goToAgeSelectionVC", sender: self)
-
         }
     }
+    
     
     //MARK: Remove loading view
     func dismissLoadingView() {
@@ -227,12 +261,39 @@ class SignUpInitialVC: UIViewController {
             ageViewController.userInfo.lastName = self.lastNameFB
         }
     }
-    
 }
 
 
+extension SignUpInitialVC: UITextFieldDelegate {
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        print("end editing")
+        if textField == firstNameTextField {
+            if let firstName = firstNameTextField.text {
+                self.firstName = firstName
+                print("First Name: ", firstName)
+            }
+        }
+    }
+    
+    // return key go to next textfield
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        if let nextTextField = textField.superview?.viewWithTag(textField.tag + 1) as? UITextField {
+            nextTextField.becomeFirstResponder()
+        } else {
+            textField.resignFirstResponder()
+        }
+        return false
+    }
+}
 
 
+// Dismiss Keyboard when scrolling
+extension SignUpInitialVC: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        self.view.endEditing(true)
+    }
+}
 
 
 

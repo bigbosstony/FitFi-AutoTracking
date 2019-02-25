@@ -59,5 +59,12 @@ extension UIButton {
 
 
 extension UIButton {
-    
+    func customizeButton(with color: UIColor, opacity: Float = 1.0) {
+        self.layer.shadowColor = color.cgColor
+        self.layer.shadowOffset = CGSize(width: 0.0, height: 3.0)
+        self.layer.shadowOpacity = opacity
+        self.layer.shadowRadius = 0.0
+        self.layer.masksToBounds = false
+        self.layer.cornerRadius = 5.0
+    }
 }

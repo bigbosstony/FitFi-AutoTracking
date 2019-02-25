@@ -44,6 +44,9 @@
 		EA4121A521E6A313009CD6B0 /* CollectionViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4121A421E6A313009CD6B0 /* CollectionViewCell2.swift */; };
 		EA4121A621E6A313009CD6B0 /* CollectionViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4121A421E6A313009CD6B0 /* CollectionViewCell2.swift */; };
 		EA4121A721E6A313009CD6B0 /* CollectionViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4121A421E6A313009CD6B0 /* CollectionViewCell2.swift */; };
+		EA6780F12220ACA2009F50AD /* SignInSignUpPageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6780F02220ACA2009F50AD /* SignInSignUpPageCell.swift */; };
+		EA6780F22220ACA2009F50AD /* SignInSignUpPageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6780F02220ACA2009F50AD /* SignInSignUpPageCell.swift */; };
+		EA6780F32220ACA2009F50AD /* SignInSignUpPageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6780F02220ACA2009F50AD /* SignInSignUpPageCell.swift */; };
 		EAB5225A2202521300864502 /* UIView+Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB522592202521300864502 /* UIView+Snapshot.swift */; };
 		EAB5225B2202521300864502 /* UIView+Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB522592202521300864502 /* UIView+Snapshot.swift */; };
 		EAB5225C2202521300864502 /* UIView+Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB522592202521300864502 /* UIView+Snapshot.swift */; };
@@ -135,6 +138,7 @@
 		EA41219021E408CB009CD6B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA4121A021E69F34009CD6B0 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		EA4121A421E6A313009CD6B0 /* CollectionViewCell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell2.swift; sourceTree = "<group>"; };
+		EA6780F02220ACA2009F50AD /* SignInSignUpPageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInSignUpPageCell.swift; sourceTree = "<group>"; };
 		EAB522592202521300864502 /* UIView+Snapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Snapshot.swift"; sourceTree = "<group>"; };
 		EAB5225E2203726200864502 /* SignInAndUpHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInAndUpHomeViewController.swift; sourceTree = "<group>"; };
 		EAD6754321ED1CE0007312D0 /* SignUpInitialVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpInitialVC.swift; sourceTree = "<group>"; };
@@ -277,6 +281,7 @@
 			children = (
 				EAD6754F21EE4456007312D0 /* SignInSignUp.storyboard */,
 				EAB5225E2203726200864502 /* SignInAndUpHomeViewController.swift */,
+				EA6780F02220ACA2009F50AD /* SignInSignUpPageCell.swift */,
 				EAD6754321ED1CE0007312D0 /* SignUpInitialVC.swift */,
 				EA13246A21F0578F00B202D5 /* SelectAgeViewController.swift */,
 				EA13246E21F0604400B202D5 /* FinishProfileSetupVC.swift */,
@@ -566,6 +571,7 @@
 				EA41216C21E408C9009CD6B0 /* AppDelegate.swift in Sources */,
 				EAFEB36E21F10CEF005D8C9F /* SetGoalsViewController.swift in Sources */,
 				EA4121A521E6A313009CD6B0 /* CollectionViewCell2.swift in Sources */,
+				EA6780F12220ACA2009F50AD /* SignInSignUpPageCell.swift in Sources */,
 				EA4121A121E69F34009CD6B0 /* CollectionViewCell.swift in Sources */,
 				EAB5225A2202521300864502 /* UIView+Snapshot.swift in Sources */,
 				EAB5225F2203726200864502 /* SignInAndUpHomeViewController.swift in Sources */,
@@ -588,6 +594,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA6780F22220ACA2009F50AD /* SignInSignUpPageCell.swift in Sources */,
 				EA13247021F0604400B202D5 /* FinishProfileSetupVC.swift in Sources */,
 				EA4121A621E6A313009CD6B0 /* CollectionViewCell2.swift in Sources */,
 				EA4121A221E69F34009CD6B0 /* CollectionViewCell.swift in Sources */,
@@ -617,6 +624,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA6780F32220ACA2009F50AD /* SignInSignUpPageCell.swift in Sources */,
 				EA13247121F0604400B202D5 /* FinishProfileSetupVC.swift in Sources */,
 				EA4121A721E6A313009CD6B0 /* CollectionViewCell2.swift in Sources */,
 				EA4121A321E69F34009CD6B0 /* CollectionViewCell.swift in Sources */,

@@ -8,7 +8,14 @@
 
 import Foundation
 
+enum Account {
+    case facebook
+    case email
+}
+
 struct userAccountInfoFacebook {
+    var accountType: Account?
+    
     var facebookID: String?
     var emailAddress: String?
     var firstName: String?
@@ -19,6 +26,7 @@ struct userAccountInfoFacebook {
     var heightUnit: String = "cm"
     var weight: Int?
     var weightUnit: String = "KG"
+    var password: String?
 //    var profilePictureURL: String?
     
 //    init(facebookID: String, emailAddress: String, firstName: String, lastName: String) {

@@ -17,6 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        print("File Path of SQLite and .plist: " ,FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
+
         // Override point for customization after application launch.
         SDKApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
         //        Check If User has Logged In
@@ -38,9 +41,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let storyboard : UIStoryboard = UIStoryboard(name: "SignInSignUp", bundle: nil)
         let signInSignUpRootNC : UINavigationController = storyboard.instantiateViewController(withIdentifier: "signInAndUpHomeNC") as UIViewController as! UINavigationController
 
+        
+        // setup initial vc
         self.window = UIWindow(frame: UIScreen.main.bounds)
-        self.window?.rootViewController = signInSignUpRootNC
         self.window?.makeKeyAndVisible()
+        self.window?.rootViewController = signInSignUpRootNC
+
+
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

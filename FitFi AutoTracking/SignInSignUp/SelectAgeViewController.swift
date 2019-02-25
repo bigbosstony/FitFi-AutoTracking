@@ -37,41 +37,34 @@ class SelectAgeViewController: UIViewController {
     var femaleButton = UIButton()
     var maleButton = UIButton()
 
+    let shadowColorGray = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25)
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         print("viewDidLoad")
-        //Hide Tab bar border
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.prefersLargeTitles = true
+
 
         let femaleImage = UIImage(named: "Icons/genderFemale")
         let maleImage = UIImage(named: "Icons/genderMale")
 
         let sideLength = self.view.frame.width / 2 - 30
 
-        //Button Shadow
-        nextButton.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
-        nextButton.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
-        nextButton.layer.shadowOpacity = 1.0
-        nextButton.layer.shadowRadius = 0.0
-        nextButton.layer.masksToBounds = false
-        nextButton.layer.cornerRadius = 5.0
         
-
         femaleButton = UIButton(frame: CGRect(x: 20, y: 215, width: sideLength, height: sideLength))
         femaleButton.imageView?.contentMode = UIView.ContentMode.scaleAspectFit
         femaleButton.setImage(femaleImage, for: UIControl.State.normal)
         femaleButton.addTarget(self, action: #selector(femaleButtonPressed), for: UIControl.Event.touchUpInside)
         femaleButton.alpha = 0.25
-
+        
         maleButton = UIButton(frame: CGRect(x: (20 + sideLength + 10), y: 215, width: sideLength, height: sideLength))
         maleButton.imageView?.contentMode = UIView.ContentMode.scaleAspectFit
         maleButton.setImage(maleImage, for: UIControl.State.normal)
         maleButton.addTarget(self, action: #selector(maleButtonPressed), for: UIControl.Event.touchUpInside)
         maleButton.alpha = 0.25
-
+        
         
         view.addSubview(femaleButton)
         view.addSubview(maleButton)

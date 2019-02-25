@@ -30,24 +30,24 @@ class SelectInterestViewController: UIViewController {
         // Do any additional setup after loading the view.
         
 //        self.navigationItem.hidesBackButton = true
-
+        
+        // TODO: prepare data for server
+        
+        
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
     @IBAction func goToAppButtonPressed(_ sender: UIButton) {
         print("registering")
         
         //TODO: Send Data to Server
+        
+        
+        
+        //TODO: Save Data to Userdefaults
+        UserDefaults.standard.set(userInfo.emailAddress, forKey: "email")
+        
         
         //MARK: Proceed to Home Screen
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
