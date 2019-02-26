@@ -8,26 +8,26 @@
 
 import UIKit
 
-protocol MuscleGroupRecieved {
-    func setMuscleGroup(from data: [Muscle])
-}
+//protocol MuscleGroupRecieved {
+//    func setMuscleGroup(from data: [Muscle])
+//}
 
 
 class MuscleGroupViewController: UIViewController {
 
-    var delegate: MuscleGroupRecieved?
-    var selectedMuscleGroupArray: [Muscle]? {
-        didSet {
-            print(selectedMuscleGroupArray)
-            if muscleGroupCollectionView != nil {
-                muscleGroupCollectionView.reloadData()
-            }
-        }
-    }
+//    var delegate: MuscleGroupRecieved?
+//    var selectedMuscleGroupArray: [Muscle]? {
+//        didSet {
+//            print(selectedMuscleGroupArray)
+//            if muscleGroupCollectionView != nil {
+//                muscleGroupCollectionView.reloadData()
+//            }
+//        }
+//    }
     
     @IBOutlet weak var muscleGroupCollectionView: UICollectionView!
     
-    var muscleGroupArray: [Muscle] = [Muscle]()
+//    var muscleGroupArray: [Muscle] = [Muscle]()
     
     var backingImage: UIImage?
     @IBOutlet weak var backingImageView: UIImageView!
@@ -84,7 +84,7 @@ class MuscleGroupViewController: UIViewController {
     
     
     @IBAction func finishButtonPressed(_ sender: UIButton) {
-        delegate?.setMuscleGroup(from: selectedMuscleGroupArray ?? [Muscle]())
+//        delegate?.setMuscleGroup(from: selectedMuscleGroupArray ?? [Muscle]())
         self.dismiss(animated: true, completion: nil)
     }
 }
@@ -94,17 +94,18 @@ extension MuscleGroupViewController: UICollectionViewDelegate, UICollectionViewD
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return selectedMuscleGroupArray?.count ?? 0
+//        return selectedMuscleGroupArray?.count ?? 0
+        return 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell1", for: indexPath) as! MuscleGroupCollectionViewCell
         
-        let muscle = selectedMuscleGroupArray?[indexPath.row]
+//        let muscle = selectedMuscleGroupArray?[indexPath.row]
         
-        cell.backgroundColor = muscle?.select ?? false ? UIColor.red : UIColor.black
-        cell.cellLabel.text = muscle?.name
-        cell.cellLabel.textColor = muscle?.select ?? false ? UIColor.yellow : UIColor.white
+//        cell.backgroundColor = muscle?.select ?? false ? UIColor.red : UIColor.black
+//        cell.cellLabel.text = muscle?.name
+//        cell.cellLabel.textColor = muscle?.select ?? false ? UIColor.yellow : UIColor.white
         
         cell.layer.cornerRadius = 5
         
@@ -114,7 +115,7 @@ extension MuscleGroupViewController: UICollectionViewDelegate, UICollectionViewD
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let selectedItem = indexPath.row
         
-        selectedMuscleGroupArray![selectedItem].select = !selectedMuscleGroupArray![selectedItem].select
+//        selectedMuscleGroupArray![selectedItem].select = !selectedMuscleGroupArray![selectedItem].select
         
         print(indexPath)
     }

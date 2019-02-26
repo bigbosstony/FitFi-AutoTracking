@@ -25,9 +25,6 @@
 		EA13246B21F0578F00B202D5 /* SelectAgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA13246A21F0578F00B202D5 /* SelectAgeViewController.swift */; };
 		EA13246C21F0578F00B202D5 /* SelectAgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA13246A21F0578F00B202D5 /* SelectAgeViewController.swift */; };
 		EA13246D21F0578F00B202D5 /* SelectAgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA13246A21F0578F00B202D5 /* SelectAgeViewController.swift */; };
-		EA13246F21F0604400B202D5 /* FinishProfileSetupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA13246E21F0604400B202D5 /* FinishProfileSetupVC.swift */; };
-		EA13247021F0604400B202D5 /* FinishProfileSetupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA13246E21F0604400B202D5 /* FinishProfileSetupVC.swift */; };
-		EA13247121F0604400B202D5 /* FinishProfileSetupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA13246E21F0604400B202D5 /* FinishProfileSetupVC.swift */; };
 		EA13247321F06C9800B202D5 /* ProfileSetupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA13247221F06C9800B202D5 /* ProfileSetupTableViewCell.swift */; };
 		EA13247421F06C9800B202D5 /* ProfileSetupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA13247221F06C9800B202D5 /* ProfileSetupTableViewCell.swift */; };
 		EA13247521F06C9800B202D5 /* ProfileSetupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA13247221F06C9800B202D5 /* ProfileSetupTableViewCell.swift */; };
@@ -77,6 +74,9 @@
 		EAD6757221EF8CEE007312D0 /* SetUpProfileCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAD6756E21EF8CEE007312D0 /* SetUpProfileCollectionViewCell.xib */; };
 		EAD6757321EF8CEE007312D0 /* SetUpProfileCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAD6756E21EF8CEE007312D0 /* SetUpProfileCollectionViewCell.xib */; };
 		EAD6757421EF8CEE007312D0 /* SetUpProfileCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAD6756E21EF8CEE007312D0 /* SetUpProfileCollectionViewCell.xib */; };
+		EAE907D92225959400EDD6A3 /* ProfileDetailsSetupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE907D82225959300EDD6A3 /* ProfileDetailsSetupVC.swift */; };
+		EAE907DA2225959400EDD6A3 /* ProfileDetailsSetupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE907D82225959300EDD6A3 /* ProfileDetailsSetupVC.swift */; };
+		EAE907DB2225959400EDD6A3 /* ProfileDetailsSetupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE907D82225959300EDD6A3 /* ProfileDetailsSetupVC.swift */; };
 		EAF4A67521FA4F300095E18A /* BounceButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF4A67421FA4F300095E18A /* BounceButton.swift */; };
 		EAF4A67621FA4F300095E18A /* BounceButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF4A67421FA4F300095E18A /* BounceButton.swift */; };
 		EAF4A67721FA4F300095E18A /* BounceButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF4A67421FA4F300095E18A /* BounceButton.swift */; };
@@ -121,7 +121,6 @@
 		EA10A63722011434007FC276 /* MuscleGroupCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuscleGroupCollectionViewCell.swift; sourceTree = "<group>"; };
 		EA10A63B22021A7A007FC276 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		EA13246A21F0578F00B202D5 /* SelectAgeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAgeViewController.swift; sourceTree = "<group>"; };
-		EA13246E21F0604400B202D5 /* FinishProfileSetupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishProfileSetupVC.swift; sourceTree = "<group>"; };
 		EA13247221F06C9800B202D5 /* ProfileSetupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSetupTableViewCell.swift; sourceTree = "<group>"; };
 		EA41216821E408C9009CD6B0 /* FitFi AutoTracking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FitFi AutoTracking.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA41216B21E408C9009CD6B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -149,6 +148,7 @@
 		EAD6755921EE6BC0007312D0 /* AccountInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountInfo.swift; sourceTree = "<group>"; };
 		EAD6756D21EF8CEE007312D0 /* SetUpProfileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetUpProfileCollectionViewCell.swift; sourceTree = "<group>"; };
 		EAD6756E21EF8CEE007312D0 /* SetUpProfileCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SetUpProfileCollectionViewCell.xib; sourceTree = "<group>"; };
+		EAE907D82225959300EDD6A3 /* ProfileDetailsSetupVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileDetailsSetupVC.swift; sourceTree = "<group>"; };
 		EAF4A67421FA4F300095E18A /* BounceButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BounceButton.swift; sourceTree = "<group>"; };
 		EAFEB36921F0E4C3005D8C9F /* PickerViewLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewLauncher.swift; sourceTree = "<group>"; };
 		EAFEB36D21F10CEF005D8C9F /* SetGoalsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetGoalsViewController.swift; sourceTree = "<group>"; };
@@ -284,7 +284,7 @@
 				EA6780F02220ACA2009F50AD /* SignInSignUpPageCell.swift */,
 				EAD6754321ED1CE0007312D0 /* SignUpInitialVC.swift */,
 				EA13246A21F0578F00B202D5 /* SelectAgeViewController.swift */,
-				EA13246E21F0604400B202D5 /* FinishProfileSetupVC.swift */,
+				EAE907D82225959300EDD6A3 /* ProfileDetailsSetupVC.swift */,
 				EA13247221F06C9800B202D5 /* ProfileSetupTableViewCell.swift */,
 				EAFEB36D21F10CEF005D8C9F /* SetGoalsViewController.swift */,
 				EA10A633220100B2007FC276 /* MuscleGroupViewController.swift */,
@@ -564,8 +564,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA10A6302200F2C2007FC276 /* SelectInterestViewController.swift in Sources */,
+				EAE907D92225959400EDD6A3 /* ProfileDetailsSetupVC.swift in Sources */,
 				EAD6756F21EF8CEE007312D0 /* SetUpProfileCollectionViewCell.swift in Sources */,
-				EA13246F21F0604400B202D5 /* FinishProfileSetupVC.swift in Sources */,
 				EAD6754421ED1CE0007312D0 /* SignUpInitialVC.swift in Sources */,
 				EA10A63C22021A7A007FC276 /* TabBarViewController.swift in Sources */,
 				EA41216C21E408C9009CD6B0 /* AppDelegate.swift in Sources */,
@@ -595,7 +595,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA6780F22220ACA2009F50AD /* SignInSignUpPageCell.swift in Sources */,
-				EA13247021F0604400B202D5 /* FinishProfileSetupVC.swift in Sources */,
 				EA4121A621E6A313009CD6B0 /* CollectionViewCell2.swift in Sources */,
 				EA4121A221E69F34009CD6B0 /* CollectionViewCell.swift in Sources */,
 				EA13246C21F0578F00B202D5 /* SelectAgeViewController.swift in Sources */,
@@ -607,6 +606,7 @@
 				EAD6754521ED1CE0007312D0 /* SignUpInitialVC.swift in Sources */,
 				EA13247421F06C9800B202D5 /* ProfileSetupTableViewCell.swift in Sources */,
 				EAFEB37321F26F47005D8C9F /* ButtonExtensions.swift in Sources */,
+				EAE907DA2225959400EDD6A3 /* ProfileDetailsSetupVC.swift in Sources */,
 				EA10A6312200F2C2007FC276 /* SelectInterestViewController.swift in Sources */,
 				EA10A63922011434007FC276 /* MuscleGroupCollectionViewCell.swift in Sources */,
 				EAB522602203726200864502 /* SignInAndUpHomeViewController.swift in Sources */,
@@ -625,7 +625,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA6780F32220ACA2009F50AD /* SignInSignUpPageCell.swift in Sources */,
-				EA13247121F0604400B202D5 /* FinishProfileSetupVC.swift in Sources */,
 				EA4121A721E6A313009CD6B0 /* CollectionViewCell2.swift in Sources */,
 				EA4121A321E69F34009CD6B0 /* CollectionViewCell.swift in Sources */,
 				EA13246D21F0578F00B202D5 /* SelectAgeViewController.swift in Sources */,
@@ -637,6 +636,7 @@
 				EAD6754621ED1CE0007312D0 /* SignUpInitialVC.swift in Sources */,
 				EA13247521F06C9800B202D5 /* ProfileSetupTableViewCell.swift in Sources */,
 				EAFEB37421F26F47005D8C9F /* ButtonExtensions.swift in Sources */,
+				EAE907DB2225959400EDD6A3 /* ProfileDetailsSetupVC.swift in Sources */,
 				EA10A6322200F2C2007FC276 /* SelectInterestViewController.swift in Sources */,
 				EA10A63A22011434007FC276 /* MuscleGroupCollectionViewCell.swift in Sources */,
 				EAB522612203726200864502 /* SignInAndUpHomeViewController.swift in Sources */,

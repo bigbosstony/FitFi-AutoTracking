@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FinishProfileSetupVC: UIViewController {
+class ProfileDetailsSetupVC: UIViewController {
     
     @IBOutlet weak var nextButton: UIButton!
     //    var fieldArray: [String: Any?] = ["Age": nil, "Weight": nil, "Height": nil]
@@ -25,9 +25,9 @@ class FinishProfileSetupVC: UIViewController {
     
     var goNext = false
     
-    var fieldDataArray: [Any?] = [nil, nil, nil] {
+    var userAgeWeightHeightArray: [Any?] = [nil, nil, nil] {
         didSet {
-            let next = fieldDataArray.contains { $0 == nil }
+            let next = userAgeWeightHeightArray.contains { $0 == nil }
             if !next {
                 goNext = true
                 nextButton.backgroundColor = UIColor.init(red: 246/255, green: 120/255, blue: 12/255, alpha: 1)
@@ -53,7 +53,6 @@ class FinishProfileSetupVC: UIViewController {
     
     var userInfo = userAccountInfoFacebook() {
         didSet {
-
             print("FinishProfileSetupVC", userInfo)
         }
     }
@@ -62,7 +61,7 @@ class FinishProfileSetupVC: UIViewController {
         didSet {
             pickerView.reloadAllComponents()
 
-            if let number = fieldDataArray[key] as? String {
+            if let number = userAgeWeightHeightArray[key] as? String {
                 print(number)
                 pickerView.selectRow(Int(number)!, inComponent: 0, animated: false)
             } else {
@@ -128,8 +127,9 @@ class FinishProfileSetupVC: UIViewController {
             blackView.backgroundColor = UIColor(white: 0, alpha: 0.5)
             blackView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleDismiss)))
             
-            let height: CGFloat = window.frame.height / 3 - 44
             let x: CGFloat = 0
+            let height: CGFloat = window.frame.height / 3 - 44
+
             let y = window.frame.height - height
             let width = window.frame.width
             
@@ -174,10 +174,11 @@ class FinishProfileSetupVC: UIViewController {
             self.view.willRemoveSubview(self.pickerView)
             self.view.willRemoveSubview(self.toolBar)
         }
+        
     }
 }
 
-extension FinishProfileSetupVC: UITableViewDelegate, UITableViewDataSource {
+extension ProfileDetailsSetupVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3
     }
@@ -188,15 +189,15 @@ extension FinishProfileSetupVC: UITableViewDelegate, UITableViewDataSource {
         
         cell.textLabel?.text = fieldNameArray[indexPath.row]
         if indexPath.row == 1 {
-            var string = fieldDataArray[1] as? String ?? ""
+            var string = userAgeWeightHeightArray[1] as? String ?? ""
             string.append(" " + weightUnitArray[currentWeightUnit])
             cell.cellLabel.text = string
         } else if indexPath.row == 2 {
-            var string = fieldDataArray[2] as? String ?? ""
+            var string = userAgeWeightHeightArray[2] as? String ?? ""
             string.append(" " + heightUnitArray[currentHeightUnit])
             cell.cellLabel.text = string
         } else {
-            cell.cellLabel.text = fieldDataArray[0] as? String ?? ""
+            cell.cellLabel.text = userAgeWeightHeightArray[0] as? String ?? ""
         }
 //        let pickerView = UIPickerView()
 //        pickerView.delegate = self
@@ -215,7 +216,7 @@ extension FinishProfileSetupVC: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
-extension FinishProfileSetupVC: UIPickerViewDelegate, UIPickerViewDataSource {
+extension ProfileDetailsSetupVC: UIPickerViewDelegate, UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         if key == 0 {
             return 1
@@ -269,11 +270,11 @@ extension FinishProfileSetupVC: UIPickerViewDelegate, UIPickerViewDataSource {
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if key == 0 {
-            fieldDataArray[key] = ageStringArray[row]
+            userAgeWeightHeightArray[key] = ageStringArray[row]
             userInfo.age = Int(ageStringArray[row])
         } else if key == 1 {
             if component == 0 {
-                fieldDataArray[key] = weightStringArray[row]
+                userAgeWeightHeightArray[key] = weightStringArray[row]
                 userInfo.weight = Int(weightStringArray[row])
             } else {
                 userInfo.weightUnit = weightUnitArray[row]
@@ -281,7 +282,7 @@ extension FinishProfileSetupVC: UIPickerViewDelegate, UIPickerViewDataSource {
             }
         } else {
             if component == 0 {
-                fieldDataArray[key] = heightStringArray[row]
+                userAgeWeightHeightArray[key] = heightStringArray[row]
                 userInfo.height = Int(heightStringArray[row])
             } else {
                 userInfo.heightUnit = heightUnitArray[row]
@@ -291,6 +292,6 @@ extension FinishProfileSetupVC: UIPickerViewDelegate, UIPickerViewDataSource {
         profileSetupTableView.reloadData()
         
         
-        print(fieldDataArray)
+        print(userAgeWeightHeightArray)
     }
 }

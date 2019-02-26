@@ -46,12 +46,12 @@
 		<dict>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>fb798593493824243</string>
+				<string>fb605676803216269</string>
 			</array>
 		</dict>
 	</array>
 	<key>FacebookAppID</key>
-	<string>798593493824243</string>
+	<string>605676803216269</string>
 	<key>FacebookDisplayName</key>
 	<string>FitFi App</string>
 	<key>LSApplicationQueriesSchemes</key>

@@ -11,11 +11,6 @@ import UIKit
 class SelectInterestViewController: UIViewController {
 
     
-    var selectedMuscleGroupArray: [Muscle] = [] {
-        didSet {
-            print("++", self.selectedMuscleGroupArray)
-        }
-    }
     
     var userInfo = userAccountInfoFacebook() {
         didSet {

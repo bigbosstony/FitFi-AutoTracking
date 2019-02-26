@@ -96,7 +96,7 @@ class SelectAgeViewController: UIViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToFinishProfileSetupVC" {
-            let destinationVC = segue.destination as! FinishProfileSetupVC
+            let destinationVC = segue.destination as! ProfileDetailsSetupVC
             destinationVC.userInfo = userInfo
         }
     }
