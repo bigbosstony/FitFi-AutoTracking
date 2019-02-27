@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct MuscleGroup {
+struct PopUpTableViewData {
     var name: String
     var select: Bool
 }
@@ -16,17 +16,30 @@ struct MuscleGroup {
 class SetGoalsViewController: UIViewController {
     
     let muscleGroupStringArray: [String] = ["Tricep", "Bicep", "Forearm", "Chest", "Shoulders", "Back", "Abs", "Glutes", "Thigh", "Calf"]
-
     let interestStirngArray: [String] = ["2", "3", "4", "5", "6", "7", "8", "8"]
     
     // Construct muscle group array
-    lazy var muscleGroupArray: [MuscleGroup] = {
-        var muscles = [MuscleGroup]()
+    lazy var muscleGroupArray: [PopUpTableViewData] = {
+        var muscles = [PopUpTableViewData]()
         for muscle in muscleGroupStringArray {
-            muscles.append(MuscleGroup(name: muscle, select: false))
+            muscles.append(PopUpTableViewData(name: muscle, select: false))
         }
         return muscles
     }()
+    
+    lazy var interestArray: [PopUpTableViewData] = {
+        var interests = [PopUpTableViewData]()
+        for interest in interestStirngArray {
+            interests.append(PopUpTableViewData(name: interest, select: false))
+        }
+        return interests
+    }()
+    
+    private var currentDataArray = [PopUpTableViewData]() {
+        didSet {
+            popUpTableView.reloadData()
+        }
+    }
     
     var userInfo = userAccountInfoFacebook() {
         didSet {
@@ -36,7 +49,12 @@ class SetGoalsViewController: UIViewController {
     
     private var buttonTag: Int = 0 {
         didSet {
-            popUpTableView.reloadData()
+            switch buttonTag {
+            case 0:
+                currentDataArray = muscleGroupArray
+            default:
+                currentDataArray = interestArray
+            }
         }
     }
     
@@ -126,7 +144,13 @@ extension SetGoalsViewController {
     }
     
     @objc func handleDismiss() {
-        print("Dismiss")
+        //save current array data to right array
+        switch buttonTag {
+        case 0:
+            muscleGroupArray = currentDataArray
+        default:
+            interestArray = currentDataArray
+        }
         
         UIView.animate(withDuration: 0.4) {
             self.blackView.alpha = 0
@@ -144,39 +168,43 @@ extension SetGoalsViewController {
 //tableView functions
 extension SetGoalsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        switch buttonTag {
-        case 0:
-            return muscleGroupArray.count
-        default:
-            return interestStirngArray.count
-        }
+//        switch buttonTag {
+//        case 0:
+//            return muscleGroupArray.count
+//        default:
+//            return interestStirngArray.count
+//        }
+        return currentDataArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
-        switch buttonTag {
-        case 0:
-            cell?.textLabel?.text = muscleGroupArray[indexPath.row].name
-            cell?.accessoryType = !muscleGroupArray[indexPath.row].select ? .none : .checkmark
-        default:
-            cell?.textLabel?.text = interestStirngArray[indexPath.row]
-        }
+//        switch buttonTag {
+//        case 0:
+//            cell?.textLabel?.text = muscleGroupArray[indexPath.row].name
+//            cell?.accessoryType = !muscleGroupArray[indexPath.row].select ? .none : .checkmark
+//        default:
+//            cell?.textLabel?.text = interestStirngArray[indexPath.row]
+//        }
+        cell?.textLabel?.text = currentDataArray[indexPath.row].name
+        cell?.accessoryType = !currentDataArray[indexPath.row].select ? .none : .checkmark
         
         return cell!
     }
     
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        print(scrollView.contentOffset.y)
-    }
+//    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+//        print(scrollView.contentOffset.y)
+//    }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        switch buttonTag {
-        case 0:
-            muscleGroupArray[indexPath.row].select = !muscleGroupArray[indexPath.row].select
-            print(muscleGroupArray)
-        default:
-            print(interestStirngArray[indexPath.row])
-        }
+//        switch buttonTag {
+//        case 0:
+//            muscleGroupArray[indexPath.row].select = !muscleGroupArray[indexPath.row].select
+//            print(muscleGroupArray)
+//        default:
+//            print(interestStirngArray[indexPath.row])
+//        }
+        currentDataArray[indexPath.row].select = !currentDataArray[indexPath.row].select
         tableView.deselectRow(at: indexPath, animated: true)
         tableView.reloadData()
     }
@@ -190,6 +218,7 @@ extension SetGoalsViewController {
     
     //sent data to server
 
+    //save data to local
 }
 
 
